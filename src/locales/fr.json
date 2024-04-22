@@ -1,3 +1,82 @@
 {
-    
+  "flatHeatingElements": {
+    "aluminium": {
+      "descr": "Les éléments chauffants plats en aluminium sont utilisés pour chauffer rapidement les pièces métalliques des équipements industriels. La conception monobloc de l'élément chauffant plat est résistante à la corrosion et facile à installer. Les éléments chauffants plats en aluminium sont utilisés dans un complexe d'équipements de production pour la transformation du plastique, à savoir : extrudeuses, moules, machines de moulage par injection et autres. Notre entreprise vous fournira des éléments chauffants en aluminium fabriqués en alliage de haute qualité, très durables. Le principal avantage des éléments chauffants plats en aluminium est la fiabilité de la conception et sa fabricabilité."
+    },
+    "ceramic": {
+      "descr": "Les éléments chauffants plats en céramique sont fabriqués sur commande et ont des tailles individuelles. La conception d'un radiateur en céramique se compose des éléments suivants : fil de résistance chauffante, blocs isolants en céramique, boîtier métallique de protection, câble électrique."
+    },
+    "metal": {
+      "descr": "Les éléments chauffants plats en métal avec isolation en micanite sont un dispositif qui fonctionne sur la base d'un élément chauffant résistif en fil. La conception se compose de couches de papier mica sur lesquelles un élément chauffant est enroulé (la puissance de l'élément chauffant dépend de l'épaisseur et de la fréquence d'enroulement du fil). Le boîtier de protection en acier inoxydable assurera un chauffage uniforme sur toute la surface de l'élément chauffant. Les radiateurs plats n'ont qu'un seul côté chauffant. Les éléments chauffants plats sont fabriqués sur commande, de n'importe quelle forme et taille - pour s'adapter à l'équipement du client. (ROND, CARRÉ, PLAQUES) Si nécessaire, vous pouvez réaliser un radiateur plat avec des découpes et des trous pour les fixations. Nous proposons également plusieurs types de câbles électriques qui assureront une installation et une connexion faciles. Le radiateur peut être équipé d'un thermocouple de type K ou de type J. Le champ d'application d'un radiateur plat est varié. Les éléments chauffants plats sont très demandés en raison de leur haute fonctionnalité."
+    }
+  },
+
+  "extruderRingHeaters": {
+    "bronze": {
+      "descr": "Les éléments chauffants à anneau en laiton présentent des avantages techniques élevés, sont stables en fonctionnement et résistants à la corrosion. La puissance de chauffe spécifique suppose une montée en température rapide pour une température maximale de 500°C."
+    },
+    "ceramic": {
+      "descr": "L'anneau chauffant en céramique est utilisé dans des équipements tels que les extrudeuses, les machines de moulage par injection et autres machines de coulée complexes. À des températures de fonctionnement de 300 à 500ºС. La conception de l'anneau chauffant en céramique peut prendre la forme d'un anneau ou d'un demi-anneau. Le radiateur peut avoir des trous pour le montage, un thermocouple intégré et un système de boulons d'attache. Un élément chauffant en céramique standard se compose des matériaux suivants : élément chauffant (fil résistif enroulé en spirale), isolant (blocs de céramique), boîtier de protection (acier inoxydable), câble électrique (fil résistant à la chaleur connecté au radiateur)."
+    },
+    "metal": {
+      "descr": "L'élément chauffant métallique est un ruban résistif de 3 à 4 mm de large, enroulé sur une couche de micanite. Et tout cela est logé dans un boîtier en acier inoxydable. Ces éléments chauffants sont conçus pour le chauffage par contact de pièces d'équipements industriels, telles que des buses d'extrudeuse, des pièces de machines de moulage par injection et des machines de moulage par injection.",
+      "extraDescr": "Des trous technologiques peuvent être pratiqués dans le radiateur.  Il peut également être équipé d'un thermocouple intégré. Si nécessaire, il peut être équipé d'un boîtier de protection et d'un ventilateur de refroidissement."
+    }
+  },
+  "cartridgeHeatingElements": {
+    "descr": "Les cartouches chauffantes sont des éléments chauffants électriques cylindriques. Principalement utilisés pour chauffer des solides tels que des presses à injection, des plaques chauffantes ou divers outils, ils peuvent également être utilisés pour chauffer de l'eau ou des gaz dans certaines conditions. Largement utilisés pour la fabrication de pièces en plastique et en caoutchouc dans la voiture. ou dans l'industrie agro-alimentaire, etc., on les trouve également couramment dans les industries chimique, électronique, médicale, de l'emballage et nucléaire."
+  },
+  "spiralHeaters": {
+    "descr": "Les éléments chauffants en spirale ont une densité de puissance élevée. Par conséquent, ils sont le plus souvent utilisés dans des applications où une température et une puissance élevées sont requises, mais où l’espace est limité. Tout d’abord, les systèmes à canaux chauds sont équipés de réchauffeurs en spirale. La température maximale de surface de ces éléments chauffants peut atteindre 500°C pour une densité de puissance de 6 W/cm2."
+  },
+
+  "InfraredHeatingElements": {
+    "quartz": {
+      "descr": "Les émetteurs infrarouges à quartz sont un bloc d'émetteurs infrarouges tubulaires dans un réflecteur spécial. Ils fonctionnent dans la plage des ondes moyennes et émettent donc une lueur pendant le fonctionnement. Ces capteurs se caractérisent par un contrôle rapide de la température.",
+      "extraDescr": "La connexion électrique aux émetteurs infrarouges à quartz se fait généralement avec un fil isolé avec des billes de céramique. Longueur standard 150 mm. Le kit comprend un embout de bague"
+    },
+    "ceramic": {
+      "descr": "Les émetteurs infrarouges en céramique sont utilisés dans les équipements de thermoformage, les séchoirs infrarouges, les saunas infrarouges et autres équipements thermiques. Un large choix de types d'émetteurs infrarouges en taille, puissance et forme vous permettra de choisir les émetteurs adaptés à votre tâche.",
+      "spherical": {
+        "extraDescr": "L'émetteur sphérique en céramique est fabriqué avec une surface émettrice sphérique avec un angle de dispersion de 75°, ce qui augmente la surface de chauffage d'un émetteur."
+      },
+      "flat": {
+        "extraDescr": "Les émetteurs infrarouges électriques plats en céramique sont fabriqués avec une surface émettrice plate qui dirige les rayons perpendiculairement à la surface du radiateur, obtenant ainsi un chauffage uniforme sur une surface limitée."
+      },
+      "lamp": {
+        "extraDescr":"Pour un meilleur effet, les émetteurs peuvent être équipés d'un réflecteur métallique, qui permet de diriger un maximum de chaleur vers l'objet souhaité. Les lampes infrarouges en céramique ont la forme d’une ampoule ordinaire. La température sur la surface chauffante peut atteindre 600°C. Les lampes infrarouges sont fabriquées avec un espace d'air à l'intérieur, qui agit comme un isolant supplémentaire. Les lampes en céramique sont montées dans une douille en céramique ordinaire."
+      } 
+    }
+  },
+  "ceramicHeatingElements": {
+    "annealingFurnaces": {
+      "descr": "Les éléments chauffants pour fours de recuit et de séchage sont des éléments chauffants en céramique à haute température fabriqués avec des spirales résistives ouvertes dans un corps plat en céramique. Ils sont utilisés dans des fours dans lesquels ont lieu le recuit ou le séchage de divers produits. Attention! Les éléments chauffants pour les fours de recuit et de séchage sont installés uniquement verticalement. Lors du fonctionnement des éléments chauffants, il est nécessaire d'exclure la possibilité que des corps étrangers entrent en contact avec l'élément chauffant."
+    },
+    "dryHeaters": {
+      "descr": "Cet élément chauffant est constitué de fils Rescal haute résistance placés dans les rainures d'éléments cylindriques spéciaux en céramique. La spirale des éléments chauffants cylindriques est ouverte, par conséquent, lors du fonctionnement de l'élément chauffant, il est nécessaire de s'assurer de l'absence de matériaux contaminants qui pourraient nuire au fonctionnement de l'élément chauffant (rouille, huile et tout autre liquide). Les éléments chauffants secs peuvent être utilisés aussi bien pour chauffer des gaz (chauffage direct) que pour chauffer des liquides (chauffage indirect). Lorsque vous utilisez un élément chauffant sec comme réchauffeur de fluide indirect, il doit être enfermé dans une coque en métal, en céramique ou autre (également appelée « verre »). Le choix du matériau du verre dépend du type de liquide à chauffer. L'installation dans le boîtier apportera à l'élément chauffant de nombreux avantages."
+    }
+  },
+  "flexibleHeaters": {
+    "descr": "Les éléments chauffants flexibles ont une petite taille globale, une grande flexibilité et plusieurs types de connexion. Il est très pratique d'utiliser des radiateurs moulables flexibles dans votre travail, car ils assurent un chauffage uniforme sur toute la surface du moule et ne nécessitent pas d'isolation thermique supplémentaire. Il peut être équipé de capteurs à thermocouple intégrés qui surveilleront la température de chauffage. Des éléments chauffants flexibles sont utilisés dans les moules et les systèmes à canaux chauds. Les principaux avantages d'un tel radiateur sont indéniables : la capacité de se plier dans n'importe quelle direction, une température élevée et un chauffage uniforme de toute la surface du moule."
+  },
+  "components": {
+    "networkConnectors": {
+      "descr": "Les connecteurs résistants à la chaleur sont utilisés à des températures maximales de 100°C à 500°C. Ils sont fabriqués à partir de matériaux résistants à la chaleur, disposent d'une protection contre la flexion des câbles et ont également des performances électriques élevées. Vous pouvez commander chez nous et sélectionner un connecteur réseau spécifiquement adapté à votre tâche technique"
+    },
+    "thermocouples": {
+      "descr": "Principe de fonctionnement des thermocouples. Le principe principal de fonctionnement d'un thermocouple est que le chauffage ou le refroidissement des contacts entre conducteurs présente des différences dans la composition du métal, et donc dans les propriétés chimiques et physiques, qui s'accompagnent de l'apparition d'une force thermoélectromotrice. Comme vous le savez, les contacts des thermocouples sont constitués de deux types de métaux connectés à une extrémité. La partie connectée est installée à",
+      "typeK": {
+        "descr": "Un capteur de température à thermocouple moderne de type K peut être fabriqué dans différentes conceptions. Les principaux paramètres de choix : diamètre et longueur de la tige, longueur du fil, diamètre du filetage et plage de température. Lors de la commande d'un thermocouple, veillez à indiquer ces paramètres. Le thermocouple K ou TXA est en matériau chromel-alumel. La limite de température de ce capteur est de -200°C à +1000°C, mais la température de mesure réelle dépend du diamètre du fil de la thermoélectrode. Vérifiez le thermocouple K pour un fonctionnement dans des environnements neutres ou en excès d'oxygène."
+      },
+      "typeJ": {
+        "descr": "Le thermocouple de type J est unique en ce sens qu'il est utilisé dans une atmosphère raréfiée. La température maximale de fonctionnement du thermocouple J est de -200 à 700 ºC, car à des températures plus élevées, les fils s'oxyderont immédiatement et affecteront les données finales. Le thermocouple est en fer massif."
+      }
+    },
+    "pads": {
+      "descr": "Les borniers résistants à la chaleur, conçus et pré-évalués pour être utilisés avec des fils dimensionnels, sont souvent utilisés dans les applications où les fils peuvent être exposés à des températures élevées."
+    },
+    "bands": {
+      "descr": "Les éléments chauffants en ruban céramique sont des éléments chauffants industriels destinés à chauffer des surfaces planes ou cylindriques. Grâce à leur conception flexible, ils peuvent épouser la forme de la surface chauffante. Souvent utilisé dans les cas où il est impossible d'utiliser des pinces ou des radiateurs plats appropriés."
+    }
+  }
 }
