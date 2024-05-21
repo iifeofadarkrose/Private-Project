@@ -20,7 +20,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(
-    localStorage.getItem("selectedLanguage") || "En"
+    localStorage.getItem("selectedLanguage") || "Fr"
   );
 
   useEffect(() => {
@@ -42,19 +42,19 @@ const Header = () => {
   };
 
   return (
-    <div className="">
+    <div className="mx-auto container">
       <div className="flex justify-between lg:justify-center items-center m-8 md:mx-16">
         <Link
           to="/"
           smooth={true}
           duration={500}
-          className="text-[20px] md:text-2xl lg:text-4xl lg:mr-[175px]"
+          className="text-[20px] md:text-2xl lg:text-xl lg:mr-[80px]"
           onClick={() => scroll.scrollToTop()}
         >
           <img className="w-[164px] h-[95px]" src={logo} alt="" />
         </Link>
 
-        <div className="hidden md:flex gap-8 md:text-[16px] lg:text-2xl">
+        <div className="hidden md:flex gap-8 md:text-[16px] lg:text-xl uppercase">
           <Link to="/" className="block">
             {t("home")}
           </Link>

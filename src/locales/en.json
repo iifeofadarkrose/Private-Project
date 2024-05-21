@@ -1,4 +1,20 @@
 {
+  "home":"Home Page",
+  "about_us":"About us",
+  "our_work":"Our work",
+  "contact_us":"Contact us",
+  "who_are_we":"Who we are?",
+  "what_do_we_do":"What we do?",    
+  "our_story":"Over the years of our work, many customers from Eastern in Eastern Europe. We have reliable suppliers and partners.",
+  "our_philosophy":"Our team's philosophy is to build long-term relationships with our customers. Over the years, we have made hundreds of deliveries in the industrial heating sector, including dozens of non-standard design tasks.",
+  "name":"Name",
+  "message":"Your message",
+  "submit":"Submit form",
+  "contInt":"Contact information",
+  "social":"Social links",
+  "cont":"Feel free to contact us any time. We will get back to you as soon as we can.",
+
+
   "flatHeatingElements": {
     "aluminium": {
       "descr": "Flat aluminum heating elements are used to quickly heat metal parts of industrial equipment. The one-piece design of the flat heating element is corrosion resistant and easy to install. Flat aluminum heating elements are used in a complex of production equipment for plastic processing, namely: extruders, molds, injection molding machines and others. Our company will provide you with aluminum heating elements made of high quality alloy, very durable. The main advantage of flat aluminum heating elements is the reliability of the design and its manufacturability."

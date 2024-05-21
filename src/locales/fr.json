@@ -1,4 +1,22 @@
 {
+  "home":"ACCUEIL",
+  "about_us":"À PROPOS",
+  "our_work":"DES PRODUITS",
+  "contact_us":"NOUS CONTACTER",
+  "who_are_we":"Qui м nous?",
+  "what_do_we_do":"Qu'est-ce que nous faisons?",          
+  "our_story":"Au cours de plusieurs années de notre travail de nombreux clients d'Europe de l'Est ont commencé à nous faire confiance. Nous sommes devenus pour eux des fournisseurs et des partenaires fiables.",
+  "our_philosophy":" La philosophie de notre équipe est de construire sur le long terme relations avec nos clients. Au fil des années, nous avons effectué des centaines de livraisons sur le chauffage industriel, dont des dizaine tâches de conception non standard.",
+  "name":"Nom et prénom",
+ "message":"Votre message",
+ "submit":"Soumettre le formulaire",
+ "contInt":"Informations sur les contacts",
+ "social":"Liens sociaux",
+ "cont":"N'hésitez pas à nous contacter à tout moment. Nous vous répondrons dès que possible.",
+ 
+ 
+ 
+ 
   "flatHeatingElements": {
     "aluminium": {
       "descr": "Les éléments chauffants plats en aluminium sont utilisés pour chauffer rapidement les pièces métalliques des équipements industriels. La conception monobloc de l'élément chauffant plat est résistante à la corrosion et facile à installer. Les éléments chauffants plats en aluminium sont utilisés dans un complexe d'équipements de production pour la transformation du plastique, à savoir : extrudeuses, moules, machines de moulage par injection et autres. Notre entreprise vous fournira des éléments chauffants en aluminium fabriqués en alliage de haute qualité, très durables. Le principal avantage des éléments chauffants plats en aluminium est la fiabilité de la conception et sa fabricabilité."

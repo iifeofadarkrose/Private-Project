@@ -1,366 +1,792 @@
-const dataList = [
-  {
-    name: "Industrial Heating Elements",
-    categories: {
-      extruderRingHeaters: {
-        subcategories: {
-          bronze: {
-            descr: i18n.t("extruderRingHeaters.bronze.descr"),
-            diameter: "25 - 100mm",
-            width: "20 – 90mm",
-            thickness: "2.5 - 3mm",
-            maxElPower: "5 W/cm",
-            maxVolt: "12, 24, 48, 110, 220/230, 400 (others on order)",
-            maxTempr: "500 °C",
+import { useState } from "react";
+const CategoriesList = () => {
+  const categories = [
+    {
+      "Industrial Heating Elements": {
+        mainPh:
+          "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
+
+        categories: {
+          extruderRingHeaters: {
+            mainPh:
+              "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
+            translationKey: "extruderRingHeaters",
+
+            subcategories: {
+              bronze: {
+                descr: "extruderRingHeaters.bronze.descr",
+                diameter: "25 - 100mm",
+                width: "20 – 90mm",
+                thickness: "2.5 - 3mm",
+                maxElPower: "5 W/cm",
+                maxVolt: "12, 24, 48, 110, 220/230, 400 (others on order)",
+                maxTempr: "500 °C",
+                mainPh:
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
+                ph: [
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/2.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/3.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/4.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/5.png",
+                ],
+              },
+
+              ceramic: {
+                descr: "extruderRingHeaters.ceramic.descr",
+                diameter: "60 - 1000mm",
+                width: "30 – 500mm",
+                thickness: "10 - 12mm",
+                maxElPower: "9 W/cm",
+                maxVolt: "12, 24, 48, 110, 220/230, 400 (others on order)",
+                maxTempr: "500 °C",
+                ph: [
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/1.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/2.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/3.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/4.png",
+                ],
+                mainPh:
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/1.png",
+              },
+
+              metal: {
+                descr: "extruderRingHeaters.metal.descr",
+                diameter: "25 - 300mm",
+                width: "20 – 90mm",
+                thickness: "3 - 4mm",
+                maxElPower: "4 W/cm",
+                maxVolt: "12, 24, 48, 110, 220/230, 400 (others on order)",
+                maxTempr: "350 °C",
+                extraDescr: "extruderRingHeaters.metal.extraDescr",
+                ph: [
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/1.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/2.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/3.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/4.png",
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/5.png",
+                ],
+                mainPh:
+                  "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/1.png",
+              },
+            },
           },
+
+          flatHeatingElements: {
+            mainPh:
+              "../src/assets/img/IndustrialHeatingElements/Flat/FlatAluminum/1.png",
+            translationKey: "flatHeatingElements",
+
+            subcategories: {
+              aluminium: {
+                mainPh:
+                  "../../src/assets/img/IndustrialHeatingElements/Flat/FlatAluminum/1.png",
+                descr: "flatHeatingElements.aluminium.descr",
+                width: "25 – 1000 mm",
+                length: "40 - 1000 mm",
+                thickness: "18 - 20 mm",
+                maxElPower: "2 W/cm",
+                maxVolt: "12, 24, 48, 110, 220/230, 400 V (others on order)",
+                maxTempr: "400 °C",
+                ph: [
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatAluminium/1.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatAluminium/2.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatAluminium/3.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatAluminium/4.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatAluminium/5.png",
+                ],
+              },
+
+              ceramic: {
+                descr: "flatHeatingElements.ceramic.descr",
+                width: "50 – 400 mm",
+                length: "120 - 1200",
+                thickness: "12 mm",
+                maxElPower: "6 W/cm",
+                maxVolt: "12, 24, 48, 110, 220/230, 400 V(others on order)",
+                maxTempr: "500 °C",
+                ph: [
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatCeramic/1.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatCeramic/2.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatCeramic/3.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatCeramic/4.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatCeramic/5.png",
+                ],
+                mainPh:
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatCeramic/1.png",
+              },
+
+              metal: {
+                descr: "flatHeatingElements.metal.descr",
+                width: "20 – 1000 mm",
+                length: "40 - 1000",
+                thickness: "3 - 4 mm",
+                maxElPower: "4 W/cm",
+                maxVolt: "12, 24, 48, 110, 220/230, 400 V(others on order)",
+                maxTempr: "350 °C",
+                ph: [
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatMetal/1.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatMetal/2.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatMetal/3.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatMetal/4.png",
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatMetal/5.png",
+                ],
+                mainPh:
+                  "../src/assets/img/IndustrialHeatingElements/Flat/FlatMetal/1.png",
+              },
+            },
+          },
+
+          cartridgeHeatingElements: {
+            mainPh:
+              "../../src/assets/img/IndustrialHeatingElements/Сartridge/CartridgeHeaters/1.png",
+            translationKey: "cartridgeHeatingElements",
+            subcategories: {
+              cartridgeHeatingElements: {
+                mainPh:
+                  "../../src/assets/img/IndustrialHeatingElements/Сartridge/CartridgeHeaters/1.png",
+                descr: "cartridgeHeatingElements.descr",
+                diameter: "3 - 50mm",
+                length: "40 - 1300mm",
+                maxElPower: "50 W/cm",
+                maxVolt: "V: 12, 24, 48, 110, 220/230, 400V",
+                maxTempr: "500 °C",
+                ph: [
+                  "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/1.png",
+                  "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/2.png",
+                  "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/3.png",
+                  "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/4.png",
+                  "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/5.png",
+                ],
+              },
+            },
+          },
+          spiralHeaters: {
+            mainPh:
+              "../../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeaters/3.png",
+            translationKey: "spiralHeaters",
+            subcategories: {
+              spiralHeaters: {
+                mainPh:
+                  "../../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeaters/3.png",
+                descr: "spiralHeaters.descr",
+                diameter: "7 – 120mm",
+                length: "6 - 400mm",
+                maxElPower: "6 W/cm",
+                maxVolt: "12, 24, 48, 110, 220/230, 400V",
+                maxTempr: "500 °C",
+                ph: [
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/1.png",
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/2.png",
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/3.png",
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/4.png",
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/5.png",
+                ],
+              },
+            },
+          },
+        },
+      },
+      "Infrared Heaters": {
+        mainPh: "../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+        categories: {
           ceramic: {
-            descr: i18n.t("extruderRingHeaters.ceramic.descr"),
-            diameter: "60 - 1000mm",
-            width: "30 – 500mm",
-            thickness: "10 - 12mm",
+            mainPh:
+              "../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+            descr: "InfraredHeatingElements.ceramic.descr",
+            translationKey: "InfraredHeatingElements",
+            subcategories: {
+              "spherical": {
+                mainPh:
+                  "../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+                subcategories: {
+                  first: {
+                    mainPh:
+                      "../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+                    dimensions: "290mm*90mm",
+                    power: "150-1500W",
+                    maxVolt: "12-400V",
+                    maxTempr: "700°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                  second: {
+                    mainPh:
+                      "../../src/assets/img/InfraredРeaters/InfraredCeramic/2.png",
+                    dimensions: "245mm*60mm",
+                    power: "100-1000W",
+                    maxVolt: "12-400V",
+                    maxTempr: "700°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                  third: {
+                    mainPh:
+                      "../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+                    dimensions: "122mm*60mm",
+                    power: "100-500W",
+                    maxVolt: "12-400V",
+                    maxTempr: "700°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                  fourth: {
+                    mainPh:
+                      "../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+                    dimensions: "60mm*60mm",
+                    power: "100-250W",
+                    maxVolt: "12-400V",
+                    maxTempr: "650°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                },
+              },
+              flat: {
+                mainPh:
+                  "../../src/assets/img/InfraredРeaters/InfraredCeramic/8.png",
+                subcategories: {
+                  first: {
+                    dimensions: "290mm*90mm",
+                    power: "150-1500W",
+                    maxVolt: "12-400V",
+                    maxTempr: "700°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                  second: {
+                    dimensions: "245mm*60mm",
+                    power: "100-1000W",
+                    maxVolt: "12-400V",
+                    maxTempr: "700°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                  third: {
+                    dimensions: "122mm*60mm",
+                    power: "100-500W",
+                    maxVolt: "12-400V",
+                    maxTempr: "700°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                  fourth: {
+                    dimensions: "60mm*60mm",
+                    power: "100-250W",
+                    maxVolt: "12-400V",
+                    maxTempr: "650°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                },
+              },
+              lamps: {
+                mainPh:
+                  "../../src/assets/img/InfraredРeaters/InfraredCeramic/4.png",
+                subcategories: {
+                  first: {
+                    dimensions: "Ø 90 mm",
+                    power: "75-250W",
+                    maxVolt: "230V",
+                    maxTempr: "300-500°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                  second: {
+                    dimensions: "Ø 76 mm",
+                    power: "50-125W",
+                    maxVolt: "230V",
+                    maxTempr: "300-500°C",
+                    infraredWaveRange: "1.0 – 10.0 microns",
+                  },
+                },
+              },
+            },
+          },
+          quartz: {
+            descr: "InfraredHeatingElements.quartz.descr",
+            mainPh: "../../src/assets/img/InfraredРeaters/InfraredQuartz/1.png",
+            additionalInfo: "InfraredHeatingElements.quartz.extraDescr",
+            subcategories: {
+              "first":
+                {
+                mainPh: "../../src/assets/img/InfraredРeaters/InfraredQuartz/1.png",
+                dimensions: "247mm*62mm",
+                power: "100-1000W",
+                maxVolt: "230V",
+                maxTempr: "700 °C",
+                infraredWaveRange: "1.0 – 10.0 microns",
+                },
+            
+              "second":{
+                mainPh: "../../src/assets/img/InfraredРeaters/InfraredQuartz/2.png",
+                dimensions: "123mm*123mm",
+                power: "100-1000W",
+                maxVolt: "230V",
+                maxTempr: "700 °C",
+                infraredWaveRange: "1.0 – 10.0 microns",
+              }
+            },
+            }
+          },
+        },
+      
+      "Ceramic Heating Elements": {
+        mainPh:
+          "../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/1.png",
+        categories: {
+          ceramicHeatingElements: {
+            mainPh:
+              "../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/1.png",
+            subcategories: {
+              annealingFurnaces: {
+                descr: "ceramicHeatingElements.annealingFurnaces.descr",
+                width: "160mm",
+                length: "150mm",
+                thickness: "15mm",
+                maxVolt: "110, 230, 400V",
+                maxTempr: "1350°C",
+                ph: [
+                  "../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/1.png",
+                  "../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/2.png",
+                  "../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/3.png",
+                ],
+                mainPh:
+                  "../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/1.png",
+              },
+              dryHeaters: {
+                descr: "ceramicHeatingElements.dryHeaters.descr",
+                length: "60 – 3000mm",
+                minlengthColdZone: "10mm",
+                diameter: "30, 36, 46, 57mm",
+                maxVolt:
+                  "220; 230; 380; 3x380; 400; 3x400V (and others on order)",
+                connectionType: "flexible wires or bolts.",
+                maxElPower: "9 W/cm",
+                maxTempr: "800°C",
+                ph: [
+                  "../src/assets/img/СeramicHeatingFoams/Dry Heaters/1.png",
+                  "../src/assets/img/СeramicHeatingFoams/Dry Heaters/2.png",
+                  "../src/assets/img/СeramicHeatingFoams/Dry Heaters/3.png",
+                  "../src/assets/img/СeramicHeatingFoams/Dry Heaters/4.png",
+                  "../src/assets/img/СeramicHeatingFoams/Dry Heaters/5.png",
+                  "../src/assets/img/СeramicHeatingFoams/Dry Heaters/6.png",
+                  "../src/assets/img/СeramicHeatingFoams/Dry Heaters/7.png",
+                  "../src/assets/img/СeramicHeatingFoams/Dry Heaters/8.png",
+                ],
+                mainPh:
+                  "../../src/assets/img/СeramicHeatingFoams/DryHeaters/4.png",
+              },
+            },
+            translationKey: "ceramicHeatingElements",
+          },
+        },
+      },
+      "Flexible Heaters": {
+        mainPh: "../src/assets/img/FlexibleHeaters/9.png",
+        categories: {
+          flexibleHeaters: {
+            descr: "flexibleHeaters.descr",
+            mainPh: "../src/assets/img/FlexibleHeaters/7.png",
+            translationKey: "flexibleHeaters",
+            subcategories: {
+              flexibleHeaters: {
+                manufactOptions:
+                  "ø 6.5 mm; ø 8.5 mm; 6 × 6mm; 7 × 7mm; 8 × 8mm",
+                length: "300 - 1400mm",
+                maxVolt: "12, 24, 48, 110, 220/230, 380V",
+                maxTempr: "500°C",
+                ph: [
+                  "../src/assets/img/FlexibleHeaters/9.png",
+                  "../src/assets/img/FlexibleHeaters/10.png",
+                  "../src/assets/img/FlexibleHeaters/11.png",
+                  "../src/assets/img/FlexibleHeaters/12.png",
+                  "../src/assets/img/FlexibleHeaters/13.png",
+                  "../src/assets/img/FlexibleHeaters/14.png",
+                  "../src/assets/img/FlexibleHeaters/15.png",
+                  "../src/assets/img/FlexibleHeaters/16.png",
+                ],
+                mainPh: "../src/assets/img/FlexibleHeaters/7.png",
+              },
+            },
+          },
+        },
+      },
+      "Heating Element Materials": {
+        mainPh: "../src/assets/img/Accesories/pads/1.png",
+        categories: {
+          networkConnectors: {
+            descr: "components.networkConnectors.descr",
+            mainPh: "../../src/assets/img/Accesories/NetworkСonnectors/1.png",
+            ph: [
+              "../src/assets/img/Accesories/pads/1.png",
+              "../src/assets/img/Accesories/pads/2.png",
+              "../src/assets/img/Accesories/pads/3.png",
+              "../src/assets/img/Accesories/pads/4.png",
+              "../src/assets/img/Accesories/pads/5.png",
+              "../src/assets/img/Accesories/pads/6.png",
+              "../src/assets/img/Accesories/pads/7.png",
+              "../src/assets/img/Accesories/pads/8.png",
+              "../src/assets/img/Accesories/pads/9.png",
+              "../src/assets/img/Accesories/pads/10.png",
+              "../src/assets/img/Accesories/pads/11.png",
+              "../src/assets/img/Accesories/pads/12.png",
+              "../src/assets/img/Accesories/pads/13.png",
+              "../src/assets/img/Accesories/pads/14.png",
+            ],
+            subcategories: {},
+          },
+          Pads: {
+            descr: "components.Pads.descr",
+            mainPh: "../src/assets/img/Accesories/pads/1.png",
+            ph: [
+              "../src/assets/img/Accesories/pads/1.png",
+              "../src/assets/img/Accesories/pads/2.png",
+              "../src/assets/img/Accesories/pads/3.png",
+              "../src/assets/img/Accesories/pads/4.png",
+              "../src/assets/img/Accesories/pads/5.png",
+              "../src/assets/img/Accesories/pads/6.png",
+              "../src/assets/img/Accesories/pads/7.png",
+              "../src/assets/img/Accesories/pads/8.png",
+              "../src/assets/img/Accesories/pads/9.png",
+              "../src/assets/img/Accesories/pads/10.png",
+              "../src/assets/img/Accesories/pads/11.png",
+              "../src/assets/img/Accesories/pads/12.png",
+              "../src/assets/img/Accesories/pads/13.png",
+              "../src/assets/img/Accesories/pads/14.png",
+            ],
+            subcategories: {
+              openTwoPole: {
+                material: "ceramic",
+                operTempr: "-40°C; 350°C",
+                maxTempr: "500°C",
+                materialConection: "external (brass)",
+                maxWire: "2.5 mm² - 6 mm²",
+                size: "33x8x23mm",
+                operating: "24 A",
+                maxVolt: "500V",
+                ph: [
+                  "../assets/img/Accesories/pads/5.png",
+                  "../assets/img/Accesories/pads/5(1).png",
+                ],
+                mainPh: "../../src/assets/img/Accesories/pads/5.png",
+              },
+              openThreePole: {
+                material: "ceramic",
+                operTempr: "-40°C; 350°C",
+                maxTempr: "500°C",
+                materialConection: "external (brass)",
+                maxWire: "2.5 mm² - 6 mm²",
+                size: "54x10x23mm",
+                operating: "24 A",
+                maxVolt: "500V",
+                ph: [
+                  "../assets/img/Accesories/pads/4.png",
+                  "../assets/img/Accesories/pads/4(1).png",
+                ],
+                mainPh: "../../src/assets/img/Accesories/pads/4.png",
+              },
+              openFourPole: {
+                material: "ceramic",
+                operTempr: "-40°C; 350°C",
+                maxTempr: "500°C",
+                materialConection: "external (brass)",
+                maxWire: "2.5 mm² - 6 mm²",
+                size: "54x10x23mm",
+                operating: "24 A",
+                maxVolt: "500V",
+                ph: [
+                  "../assets/img/Accesories/pads/3.png",
+                  "../assets/img/Accesories/pads/3(1).png",
+                ],
+                mainPh: "../../src/assets/img/Accesories/pads/3.png",
+              },
+              closedTwoPole: {
+                material: "ceramic",
+                operTempr: "-40°C; 350°C",
+                maxTempr: "500°C",
+                materialConection: "external (brass)",
+                maxWire: "2.5 mm² - 6 mm²",
+                size: "54x10x23mm",
+                operating: "24 A",
+                maxVolt: "500V",
+                ph: [
+                  "../assets/img/Accesories/pads/2.png",
+                  "../assets/img/Accesories/pads/2(1).png",
+                ],
+                mainPh: "../../src/assets/img/Accesories/pads/2.png",
+              },
+            },
+          },
+          thermocouples: {
+            descr: "components.thermocouples.descr",
+            mainPh: "../../src/assets/img/Accesories/thermocouples/1.png",
+            subcategories: {
+              typeK: {
+                mainPh: "../../src/assets/img/Accesories/thermocouples/1.png",
+                descr: "components.thermocouples.typeK.descr",
+                ph: [
+                  "../../src/assets/img/Accesories/thermocouples/1.png",
+                  "../../src/assets/img/Accesories/thermocouples/2.png",
+                ],
+              },
+              typeJ: {
+                mainPh: "../../src/assets/img/Accesories/thermocouples/3.png",
+                descr: "components.thermocouples.typeJ.descr",
+                ph: [
+                  "../../src/assets/img/Accesories/thermocouples/3.png",
+                  "../../src/assets/img/Accesories/thermocouples/4.png",
+                ],
+              },
+            },
+          },
+          bands: {
+            descr: "components.bands.descr",
+            mainPh: "../../src/assets/img/Accesories/wires/band.png",
+            ph: "../../src/assets/img/Accesories/wires/band.png",
+            width: "15 – 500mm",
+            length: "50 - 1500mm",
+            thickness: "10 - 14mm",
             maxElPower: "9 W/cm",
             maxVolt: "12, 24, 48, 110, 220/230, 400 (others on order)",
-            maxTempr: "500 °C",
-          },
-          metal: {
-            descr: i18n.t("extruderRingHeaters.metal.descr"),
-            diameter: "25 - 300mm",
-            width: "20 – 90mm",
-            thickness: "3 - 4mm",
-            maxElPower: "4 W/cm",
-            maxVolt: "12, 24, 48, 110, 220/230, 400 (others on order)",
-            maxTempr: "350 °C",
-            extraDescr: i18n.t("extruderRingHeaters.metal.extraDescr"),
+            maxTempr: "500°C",
           },
         },
-        mainPh: {},
-        images: [],
-        translationKey: "extruderRingHeaters",
-      },
-      flatHeatingElements: {
-        subcategories: {
-          aluminium: {
-            descr: i18n.t("flatHeatingElements.aluminium.descr"),
-            width: "25 – 1000 mm",
-            length: "40 - 1000 mm",
-            thickness: "18 - 20 mm",
-            maxElPower: "2 W/cm",
-            maxVolt: "12, 24, 48, 110, 220/230, 400 V (others on order)",
-            maxTempr: "400 °C",
-          },
-          ceramic: {
-            descr: i18n.t("flatHeatingElements.ceramic.descr"),
-            width: "50 – 400 mm",
-            length: "120 - 1200",
-            thickness: "12 mm",
-            maxElPower: "6 W/cm",
-            maxVolt: "12, 24, 48, 110, 220/230, 400 V(others on order)",
-            maxTempr: "500 °C",
-          },
-          metal: {
-            descr: i18n.t("flatHeatingElements.metal.descr"),
-            width: "20 – 1000 mm",
-            length: "40 - 1000",
-            thickness: "3 - 4 mm",
-            maxElPower: "4 W/cm",
-            maxVolt: "12, 24, 48, 110, 220/230, 400 V(others on order)",
-            maxTempr: "350 °C",
-          },
-        },
-        mainPh: {},
-        images: [],
-        translationKey: "flatHeatingElements",
-      },
-      cartridgeHeatingElements: {
-        descr: i18n.t("cartridgeHeatingElements.descr"),
-        diameter: "3 - 50mm",
-        length: "40 - 1300mm",
-        maxElPower: "50 W/cm",
-        maxVolt: "V: 12, 24, 48, 110, 220/230, 400V",
-        maxTempr: "500 °C",
-        mainPh: {},
-        images: [],
-        translationKey: "cartridgeHeatingElements",
-      },
-      spiralHeaters: {
-        descr: i18n.t("spiralHeaters.descr"),
-        diameter: "7 – 120mm",
-        length: "6 - 400mm",
-        maxElPower: "6 W/cm",
-        maxVolt: "12, 24, 48, 110, 220/230, 400V",
-        maxTempr: "500 °C",
-        mainPh: {},
-        images: [],
-        translationKey: "spiralHeaters",
       },
     },
-  },
-  {
-    name: "Infrared Heaters",
-    categories: {
-      InfraredHeatingElements: {
-        subcategories: {
-          ceramic: {
-            descr: i18n.t("InfraredHeatingElements.ceramic.descr"),
-            spherical: [
-              {
-                dimensions: "290mm*90mm",
-                power: "150-1500W",
-                maxVolt: "12-400V",
-                maxTempr: "700°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                dimensions: "245mm*60mm",
-                power: "100-1000W",
-                maxVolt: "12-400V",
-                maxTempr: "700°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                dimensions: "122mm*60mm",
-                power: "100-500W",
-                maxVolt: "12-400V",
-                maxTempr: "700°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                dimensions: "60mm*60mm",
-                power: "100-250W",
-                maxVolt: "12-400V",
-                maxTempr: "650°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                extraDescr: i18n.t(
-                  "InfraredHeatingElements.ceramic.spherical.extraDescr"
-                ),
-              },
-            ],
+  ];
 
-            flat: [
-              {
-                dimensions: "290mm*90mm",
-                power: "150-1500W",
-                maxVolt: "12-400V",
-                maxTempr: "700°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                dimensions: "245mm*60mm",
-                power: "100-1000W",
-                maxVolt: "12-400V",
-                maxTempr: "700°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                dimensions: "122mm*60mm",
-                power: "100-500W",
-                maxVolt: "12-400V",
-                maxTempr: "700°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                dimensions: "60mm*60mm",
-                power: "100-250W",
-                maxVolt: "12-400V",
-                maxTempr: "650°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                extraDescr: i18n.t(
-                  "InfraredHeatingElements.ceramic.flat.extraDescr"
-                ),
-              },
-            ],
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
+  const [selectedSubsubcategory, setSelectedSubsubcategory] = useState(null);
+  const [selectedSubsubsubcategory, setSelectedSubsubsubcategory] = useState(null);
 
-            lamps: [
-              {
-                dimensions: "Ø 90 mm",
-                power: "75-250W",
-                maxVolt: "230V",
-                maxTempr: "300-500°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                dimensions: "Ø 76 mm",
-                power: "50-125W",
-                maxVolt: "230V",
-                maxTempr: "300-500°C",
-                infraredWaveRange: "1.0 – 10.0 microns",
-              },
-              {
-                extraDescr: i18n.t(
-                  "InfraredHeatingElements.ceramic.lamps.extraDescr"
-                ),
-              },
-            ],
-          },
-        },
-        quartz: {
-          descr: i18n.t("InfraredHeatingElements.quartz.descr"),
-          options: [
-            {
-              dimensions: "247mm*62mm",
-              power: "100-1000W",
-              maxVolt: "230V",
-              maxTempr: "700 °C",
-              infraredWaveRange: "1.0 – 10.0 microns",
-            },
-            {
-              dimensions: "123mm*123mm",
-              power: "100-1000W",
-              maxVolt: "230V",
-              maxTempr: "700 °C",
-              infraredWaveRange: "1.0 – 10.0 microns",
-            },
-            {
-              dimensions: "125mm*62mm",
-              power: "75-500W",
-              maxVolt: "230V",
-              maxTempr: "700 °C",
-              infraredWaveRange: "1.0 – 10.0 microns",
-            },
-            {
-              dimensions: "80mm*62mm",
-              power: "W:250-600",
-              maxVolt: "230V",
-              maxTempr: "700 °C",
-              infraredWaveRange: "1.0 – 10.0 microns",
-            },
-            {
-              dimensions: "62mm * 62mm",
-              power: "50-150W",
-              maxVolt: "230V",
-              maxTempr: "600 °C",
-              infraredWaveRange: "1.0 – 10.0 microns",
-            },
-          ],
-          additionalInfo: i18n.t("InfraredHeatingElements.quartz.extraDescr"),
-        },
-      },
-      mainPh: {},
-      images: [],
-      translationKey: "InfraredHeatingElements",
-    },
-  },
-  {
-    name: "Ceramic Heating Elements",
-    categories: {
-      ceramicHeatingElements: {
-        subcategories: {
-          annealingFurnaces: {
-            descr: i18n.t("ceramicHeatingElements.annealingFurnaces.descr"),
-            width: "160mm",
-            length: "150mm",
-            thickness: "15mm",
-            maxVolt: "110, 230, 400V",
-            maxTempr: "1350°C",
-          },
-          dryHeaters: {
-            descr: i18n.t("ceramicHeatingElements.dryHeaters.descr"),
-            length: "60 – 3000mm",
-            minlengthColdZone: "10mm",
-            diameter: "30, 36, 46, 57mm",
-            maxVolt: "220; 230; 380; 3x380; 400; 3x400V (and others on order)",
-            connectionType: "flexible wires or bolts.",
-            maxElPower: "9 W/cm",
-            maxTempr: "800°C",
-          },
-        },
-        mainPh: {},
-        images: [],
-        translationKey: "ceramicHeatingElements",
-      },
-    },
-  },
-  {
-    name: "Flexible Heaters",
-    categories: {
-      flexibleHeaters: {
-        descr: i18n.t("flexibleHeaters.descr"),
-        manufactOptions: "ø 6.5 mm; ø 8.5 mm; 6 × 6mm; 7 × 7mm; 8 × 8mm",
-        length: "300 - 1400mm",
-        maxVolt: "12, 24, 48, 110, 220/230, 380V",
-        maxTempr: "500°C",
-        mainPh: {},
-        images: [],
-        translationKey: "flexibleHeaters",
-      },
-    },
-  },
-  {
-    name: "Heating Element Materials",
-    categories: {
-      networkConnectors: {
-        descr: i18n.t("components.networkConnectors.descr"),
-      },
-      thermocouples: {
-        descr: i18n.t("components.thermocouples.descr"),
-        typeK: {
-          descr: i18n.t("components.thermocouples.typeK.descr"),
-        },
-        typeJ: {
-          descr: i18n.t("components.thermocouples.typeJ.descr"),
-        },
-      },
-      pads: {
-        subcategories: {
-          descr: "components.pads.descr",
-          openTwoPole: {
-            material: "ceramic",
-            operTempr: "-40°C; 350°C",
-            maxTempr: "500°C",
-            materialConection: "external (brass)",
-            maxWire: "2.5 mm² - 6 mm²",
-            size: "33x8x23mm",
-            operating: "24 A",
-            maxVolt: "500V",
-          },
-          openThreePole: {
-            material: "ceramic",
-            operTempr: "-40°C; 350°C",
-            maxTempr: "500°C",
-            materialConection: "external (brass)",
-            maxWire: "2.5 mm² - 6 mm²",
-            size: "54x10x23mm",
-            operating: "24 A",
-            maxVolt: "500V",
-          },
-          openFourPole: {
-            material: "ceramic",
-            operTempr: "-40°C; 350°C",
-            maxTempr: "500°C",
-            materialConection: "external (brass)",
-            maxWire: "2.5 mm² - 6 mm²",
-            size: "56x8x23mm",
-            operating: "24 A",
-            maxVolt: "500V",
-          },
-          closedTwoPole: {
-            material: "ceramic",
-            operTempr: "-40°C; 350°C",
-            maxTempr: "500°C",
-            materialConection: "internal (brass)",
-            maxWire: "2.5 mm² - 6 mm²",
-            size: "56x8x23mm",
-            operating: "24 A",
-            maxVolt: "500V",
-          },
-        },
-      },
-      bands: {
-        descr: i18n.t("components.bands.descr"),
-        width: "15 – 500mm",
-        length: "50 - 1500mm",
-        thickness: "10 - 14mm",
-        maxElPower: "9 W/cm",
-        maxVolt: "12, 24, 48, 110, 220/230, 400 (others on order)",
-        maxTempr: "500°C",
-      },
-      mainPh: {},
-      images: [],
-      translationKey: "components",
-    },
-  },
-];
+  const handleCategoryClick = (categoryName) => {
+    setSelectedCategory(categoryName);
+    setSelectedSubcategory(null);
+    setSelectedSubsubcategory(null);
+    setSelectedSubsubsubcategory(null);
+  };
+
+  const handleSubcategoryClick = (subcategoryName) => {
+    setSelectedSubcategory(subcategoryName);
+    setSelectedSubsubcategory(null);
+    setSelectedSubsubsubcategory(null);
+  };
+
+  const handleSubsubcategoryClick = (subsubcategoryName) => {
+    setSelectedSubsubcategory(subsubcategoryName);
+    setSelectedSubsubsubcategory(null);
+  };
+
+  const handleSubsubsubcategoryClick = (subsubsubcategoryName) => {
+    setSelectedSubsubsubcategory(subsubsubcategoryName);
+  };
+
+  const renderSubSubsubcategories = () => {
+    if (!selectedCategory || !selectedSubcategory || !selectedSubsubcategory) return null;
+
+    const category = categories[0][selectedCategory];
+    const subcategory = category.categories[selectedSubcategory];
+    const subsubcategory = subcategory.subcategories[selectedSubsubcategory];
+    if (!subsubcategory || !subsubcategory.subcategories) return null;
+
+    return Object.keys(subsubcategory.subcategories).map((subsubsubcategoryName) => {
+      const subsubsubcategory = subsubcategory.subcategories[subsubsubcategoryName];
+      return (
+        <div
+          className="cursor-pointer"
+          key={subsubsubcategoryName}
+          onClick={() => handleSubsubsubcategoryClick(subsubsubcategoryName)}
+        >
+          <div className="text-center">
+            <img
+              src={subsubsubcategory.mainPh}
+              alt={subsubsubcategoryName}
+              className="h-[180px] w-[180px]"
+            />
+            <h3>{subsubsubcategoryName}</h3>
+          </div>
+        </div>
+      );
+    });
+  };
+
+  const renderSubSubcategories = () => {
+    if (!selectedCategory || !selectedSubcategory) return null;
+
+    const category = categories[0][selectedCategory];
+    const subcategory = category.categories[selectedSubcategory];
+    if (!subcategory || !subcategory.subcategories) return null;
+
+    return Object.keys(subcategory.subcategories).map((subsubcategoryName) => {
+      const subsubcategory = subcategory.subcategories[subsubcategoryName];
+      return (
+        <div
+          className="cursor-pointer"
+          key={subsubcategoryName}
+          onClick={() => handleSubsubcategoryClick(subsubcategoryName)}
+        >
+          <div className="text-center">
+            <img
+              src={subsubcategory.mainPh}
+              alt={subsubcategoryName}
+              className="h-[180px] w-[180px]"
+            />
+            <h3>{subsubcategoryName}</h3>
+          </div>
+        </div>
+      );
+    });
+  };
+
+  const renderSubcategories = () => {
+    if (!selectedCategory) return null;
+
+    const category = categories[0][selectedCategory];
+    if (!category || !category.categories) return null;
+
+    return Object.keys(category.categories).map((subcategoryName) => {
+      const subcategory = category.categories[subcategoryName];
+      return (
+        <div
+          className="cursor-pointer"
+          key={subcategoryName}
+          onClick={() => handleSubcategoryClick(subcategoryName)}
+        >
+          <div className="text-center">
+            <img
+              src={subcategory.mainPh}
+              alt={subcategoryName}
+              className="h-[180px] w-[180px]"
+            />
+            <h3>{subcategoryName}</h3>
+          </div>
+        </div>
+      );
+    });
+  };
+
+  const renderCategories = () => {
+    return Object.keys(categories[0]).map((categoryName) => {
+      const category = categories[0][categoryName];
+      return (
+        <div
+          className="cursor-pointer"
+          key={categoryName}
+          onClick={() => handleCategoryClick(categoryName)}
+        >
+          <div className="text-center border border-black p-2 rounded-sm bg-white">
+            <img
+              src={category.mainPh}
+              alt={categoryName}
+              className="h-[220px] w-[220px] bg-center"
+            />
+            <h2 className="font-serif">{categoryName}</h2>
+          </div>
+        </div>
+      );
+    });
+  };
+
+  const renderSelectedSubsubsubcategory = () => {
+    if (!selectedSubsubsubcategory) return null;
+
+    const category = categories[0][selectedCategory];
+    const subcategory = category.categories[selectedSubcategory];
+    const subsubcategory = subcategory.subcategories[selectedSubsubcategory];
+    const subsubsubcategory = subsubcategory.subcategories[selectedSubsubsubcategory];
+
+    if (!subsubsubcategory) return null;
+
+    return (
+      <div>
+        <h3>{selectedSubsubsubcategory}</h3>
+        <div className="text-center flex">
+          <img
+            src={subsubsubcategory.mainPh}
+            alt={selectedSubsubsubcategory}
+            className="h-[250px] w-[300px]"
+          />
+          <div className="text-left items-center ml-[15%]">
+            <ul>
+              {Object.entries(subsubsubcategory).map(([key, value]) => {
+                if (key === 'mainPh' || key === 'ph' || key === 'descr') return null;
+                return (
+                  <li key={key}>
+                    {key}: {typeof value === 'string' || typeof value === 'number' ? value : JSON.stringify(value)}
+                  </li>
+                );
+              })}
+            </ul>
+            {subsubsubcategory.descr && (
+              <h3 className="mt-[12%] list-none">
+                <li key="descr">
+                  descr: <br /> {subsubsubcategory.descr}
+                </li>
+              </h3>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderSelectedSubsubcategory = () => {
+    if (!selectedSubsubcategory) return null;
+
+    const category = categories[0][selectedCategory];
+    if (!category || !category.categories || !selectedSubcategory) return null;
+
+    const subcategory = category.categories[selectedSubcategory];
+    if (!subcategory || !subcategory.subcategories) return null;
+
+    const subsubcategory = subcategory.subcategories[selectedSubsubcategory];
+    if (!subsubcategory) return null;
+
+    return (
+      <div>
+        <h3>{selectedSubsubcategory}</h3>
+        <div className="text-center flex">
+          <img
+            src={subsubcategory.mainPh}
+            alt={selectedSubsubcategory}
+            className="h-[250px] w-[300px] "
+          />
+          <div className="text-left items-center ml-[15%]">
+            <ul className="">
+              {Object.entries(subsubcategory).map(([key, value]) => {
+                if (key === 'mainPh' || key === 'ph' || key === 'descr')
+                  return null;
+                return (
+                  <li key={key}>
+                    {key}: {value}
+                  </li>
+                );
+              })}
+            </ul>
+            <h3 className="mt-[12%] list-none">
+              {Object.entries(subsubcategory).map(([key, value]) => {
+                if (key === 'descr')
+                  return (
+                    <li key={key}>
+                      {key}: <br /> {value}
+                    </li>
+                  );
+              })}
+            </h3>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="flex mx-[2%] mt-[2%] flex-wrap gap-5 justify-center">
+      {selectedSubsubsubcategory
+        ? renderSelectedSubsubsubcategory() // Отображение выбранной подподподкатегории
+        : selectedSubsubcategory && categories[0][selectedCategory]?.categories[selectedSubcategory]?.subcategories[selectedSubsubcategory]?.subcategories
+        ? renderSubSubsubcategories() // Отображение подподподкатегорий
+        : selectedSubsubcategory
+        ? renderSelectedSubsubcategory() // Отображение выбранной подподкатегории
+        : selectedSubcategory
+        ? renderSubSubcategories() // Отображение подподкатегорий
+        : selectedCategory
+        ? renderSubcategories() // Отображение подкатегорий
+        : renderCategories()}
+    </div>
+  );
+};
+
+export default CategoriesList;
