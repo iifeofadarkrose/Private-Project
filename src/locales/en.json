@@ -1,21 +1,81 @@
 {
-  "home":"Home Page",
-  "about_us":"About us",
-  "our_work":"Our work",
-  "contact_us":"Contact us",
-  "who_are_we":"Who we are?",
-  "what_do_we_do":"What we do?",    
-  "our_story":"Over the years of our work, many customers from Eastern in Eastern Europe. We have reliable suppliers and partners.",
-  "our_philosophy":"Our team's philosophy is to build long-term relationships with our customers. Over the years, we have made hundreds of deliveries in the industrial heating sector, including dozens of non-standard design tasks.",
-  "name":"Name",
-  "message":"Your message",
-  "submit":"Submit form",
-  "contInt":"Contact information",
-  "social":"Social links",
-  "cont":"Feel free to contact us any time. We will get back to you as soon as we can.",
+  "home": "Home Page",
+  "about_us": "About us",
+  "our_work": "Our work",
+  "contact_us": "Contact us",
+  "who_are_we": "Who we are?",
+  "what_do_we_do": "What we do?",
+  "our_story": "Over the years of our work, many customers from Eastern in Eastern Europe. We have reliable suppliers and partners.",
+  "our_philosophy": "Our team's philosophy is to build long-term relationships with our customers. Over the years, we have made hundreds of deliveries in the industrial heating sector, including dozens of non-standard design tasks.",
+  "name": "Name",
+  "message": "Your message",
+  "submit": "Submit form",
+  "contInt": "Contact information",
+  "social": "Social links",
+  "cont": "Feel free to contact us any time. We will get back to you as soon as we can.",
 
+  "IndustrialHeatingElements": {
+    "name": "Industrial Heating Elements",
+    "categories": {
+      "extruderRingHeaters": {
+        "name": "Extruder Ring Heaters",
+        "subcategories": {
+          "bronze": {
+            "name": "Bronze",
+            "descr": "Brass ring heating elements have high technical advantages, are stable in operation and resistant to corrosion. The specific heating power assumes a rapid rise in temperature for a maximum temperature of 500°C."
+
+          },
+          "ceramic": {
+            "name": "Ceramic",
+            "descr": "The ceramic heating ring is used in equipment such as extruders, injection molding machines and other complex casting machines. At operating temperatures from 300 to 500ºС. The design of the ceramic heating ring can be in the shape of a ring or a half ring. The heater may have mounting holes, a built-in thermocouple and a tie-bolt system. A standard ceramic heating element consists of the following materials: heating element (spirally wound resistive wire), insulator (ceramic blocks), protective casing (stainless steel), electric cable (heat-resistant wire connected to the heater)."
+
+          },
+          "metal": {
+            "name": "metal",
+            "descr": "The metal heating element is a resistive ribbon 3 to 4 mm wide, wound on a layer of micanite. And all of this is housed in a stainless steel case. These heating elements are designed for contact heating of industrial equipment parts, such as extruder nozzles, injection molding machine parts and injection molding machines.",
+            "extraDescr": "Technological holes can be made in the radiator. It can also be equipped with an integrated thermocouple. If necessary, it can be equipped with a protective case and a cooling fan."      
+          }
+        }
+      },
+
+      "flatHeatingElements": {
+        "name": "Flat Heating Elements",
+        "subcategories": {
+          "aluminium": {
+            "name": "Aluminium"
+          },
+          "ceramic": {
+            "name": "Ceramic"
+          },
+          "metal": {
+            "name": "Metal"
+          }
+        }
+      },
+      "cartridgeHeatingElements":{
+        "name":"Cartridge Heating Elements",
+        "subcategories": {
+          "cartridgeHeatingElements":{
+            "name":"Cartridge Heating Elements",
+            "descr": "Cartridge heaters are cylindrical electric heating elements. Mainly used to heat solids such as injection presses, hot plates or various tools, they can also be used to heat water or gases under certain conditions. Widely used for manufacturing plastic and rubber parts in car. or in the food industry, etc., they are also commonly found in the chemical, electronics, medical, packaging and nuclear industries."
+
+          }
+        }
+      },
+      "spiralHeaters":{
+        "name":"Spiral Heaters",
+        "subcategories":{
+          "spiralHeaters":{
+            "name":"Spiral Heaters",
+            "descr": "Spiral heating elements have high power density. Therefore, they are most often used in applications where high temperature and power are required, but space is limited. First of all, hot runner systems are equipped with spiral heaters. The maximum surface temperature of these heating elements can reach 500°C for a power density of 6 W/cm2."
+          } 
+        }
+      }
+    }
+  },
 
   "flatHeatingElements": {
+    "name": "Flat Heating Elements1",
     "aluminium": {
       "descr": "Flat aluminum heating elements are used to quickly heat metal parts of industrial equipment. The one-piece design of the flat heating element is corrosion resistant and easy to install. Flat aluminum heating elements are used in a complex of production equipment for plastic processing, namely: extruders, molds, injection molding machines and others. Our company will provide you with aluminum heating elements made of high quality alloy, very durable. The main advantage of flat aluminum heating elements is the reliability of the design and its manufacturability."
     },
@@ -27,72 +87,115 @@
     }
   },
 
-  "extruderRingHeaters": {
-    "bronze": {
-      "descr": "Brass ring heating elements have high technical advantages, are stable in operation and resistant to corrosion. The specific heating power assumes a rapid rise in temperature for a maximum temperature of 500°C."
-    },
-    "ceramic": {
-      "descr": "The ceramic heating ring is used in equipment such as extruders, injection molding machines and other complex casting machines. At operating temperatures from 300 to 500ºС. The design of the ceramic heating ring can be in the shape of a ring or a half ring. The heater may have mounting holes, a built-in thermocouple and a tie-bolt system. A standard ceramic heating element consists of the following materials: heating element (spirally wound resistive wire), insulator (ceramic blocks), protective casing (stainless steel), electric cable (heat-resistant wire connected to the heater)."
-    },
-    "metal": {
-      "descr": "The metal heating element is a resistive ribbon 3 to 4 mm wide, wound on a layer of micanite. And all of this is housed in a stainless steel case. These heating elements are designed for contact heating of industrial equipment parts, such as extruder nozzles, injection molding machine parts and injection molding machines.",
-      "extraDescr": "Technological holes can be made in the radiator. It can also be equipped with an integrated thermocouple. If necessary, it can be equipped with a protective case and a cooling fan."
-    }
-  },
-  "cartridgeHeatingElements": {
-    "descr": "Cartridge heaters are cylindrical electric heating elements. Mainly used to heat solids such as injection presses, hot plates or various tools, they can also be used to heat water or gases under certain conditions. Widely used for manufacturing plastic and rubber parts in car. or in the food industry, etc., they are also commonly found in the chemical, electronics, medical, packaging and nuclear industries."
-  },
-  "spiralHeaters": {
-    "descr": "Spiral heating elements have high power density. Therefore, they are most often used in applications where high temperature and power are required, but space is limited. First of all, hot runner systems are equipped with spiral heaters. The maximum surface temperature of these heating elements can reach 500°C for a power density of 6 W/cm2."
-  },
-
-  "InfraredHeatingElements": {
-    "quartz": {
-      "descr": "Quartz infrared emitters are a block of tubular infrared emitters in a special reflector. They operate in the mid-wave range and therefore emit a glow during operation. These emitters are characterized by fast temperature regulation.",
-      "extraDescr": "The electrical connection to quartz infrared emitters is generally made with a wire insulated with ceramic balls. Standard length 150 mm. Kit includes ring tip"
-    },
-    "ceramic": {
-      "descr": "Ceramic infrared emitters are used in thermoforming equipment, infrared dryers, infrared saunas and other thermal equipment. A wide choice of types of infrared emitters in size, power and shape will allow you to choose the emitters suited to your task.",
-      "spherical": {
-        "extraDescr": "The spherical ceramic emitter is manufactured with a spherical emitting surface with a dispersion angle of 75°, which increases the heating surface of an emitter."
+  "Infrared Heaters": {
+    "name": "Infrared Heating Elements",
+    "categories":{
+      "ceramic": {
+        "name":"Ceramic",
+        "descr": "Ceramic infrared emitters are used in thermoforming equipment, infrared dryers, infrared saunas and other thermal equipment. A wide choice of types of infrared emitters in size, power and shape will allow you to choose the emitters suited to your task.",
+        "subcategories":{
+          "spherical": {
+            "name":"Spherical",
+            "extraDescr": "The spherical ceramic emitter is manufactured with a spherical emitting surface with a dispersion angle of 75°, which increases the heating surface of an emitter."
+          },
+          "flat": {
+            "name":"Flat",
+            "extraDescr": "Flat ceramic electric infrared emitters are manufactured with a flat emitting surface that directs the rays perpendicular to the surface of the heater, thus achieving uniform heating over a limited area."
+          },
+          "lamps": {
+            "name":"Lamps",
+            "extraDescr": "For a better effect, the emitters can be equipped with a metal reflector, which allows maximum heat to be directed towards the desired object. Ceramic infrared lamps are shaped like a regular light bulb. The temperature on the heating surface can reach 600°C. Infrared lamps are manufactured with an air space inside, which acts as an additional insulator. Ceramic lamps are mounted in a regular ceramic socket."
+          }
+        }
       },
-      "flat": {
-        "extraDescr": "Flat ceramic electric infrared emitters are manufactured with a flat emitting surface that directs the rays perpendicular to the surface of the heater, thus achieving uniform heating over a limited area."
-      },
-      "lamp": {
-        "extraDescr": "For a better effect, the emitters can be equipped with a metal reflector, which allows maximum heat to be directed towards the desired object. Ceramic infrared lamps are shaped like a regular light bulb. The temperature on the heating surface can reach 600°C. Infrared lamps are manufactured with an air space inside, which acts as an additional insulator. Ceramic lamps are mounted in a regular ceramic socket."
+       "quartz": {
+        "name":"Quartz",
+        "descr": "Quartz infrared emitters are a block of tubular infrared emitters in a special reflector. They operate in the mid-wave range and therefore emit a glow during operation. These emitters are characterized by fast temperature regulation.",
+        "extraDescr": "The electrical connection to quartz infrared emitters is generally made with a wire insulated with ceramic balls. Standard length 150 mm. Kit includes ring tip",
+        "subcategories":{
+          "first":{
+            "name":"First"
+          },
+          "second":{
+            "name":"Second"
+          }
+        }
       }
     }
   },
   "ceramicHeatingElements": {
-    "annealingFurnaces": {
-      "descr": "Annealing and drying furnace heaters are high temperature ceramic heaters manufactured with open resistive spirals in a flat ceramic body. They are used in ovens in which the annealing or drying of various products takes place. Attention! Heating elements for annealing and drying ovens are installed vertically only. When operating heating elements, it is necessary to exclude the possibility of foreign objects coming into contact with the heating element."
-    },
-    "dryHeaters": {
-      "descr": "This heating element consists of high-strength Rescal wires placed in the grooves of special cylindrical ceramic elements. The spiral of cylindrical heating elements is open, therefore, when operating the heating element, it is necessary to ensure the absence of contaminating materials that could adversely affect the operation of the heating element (rust, oil and any other liquid). Dry heating elements can be used both to heat gases (direct heating) and to heat liquids (indirect heating). When using a dry heating element as an indirect fluid heater, it must be enclosed in a metal, ceramic, or other shell (also called glass ). The choice of glass material depends on the type of liquid to be heated. Installation in the case will bring the heating element many advantages."
+    "name": "Ceramic Heating Elements",
+    "categories":{
+      "ceramicHeatingElements":{
+        "name":"Ceramic Heating Elements",
+        "subcategories":{
+          "annealingFurnaces": {
+            "name":"Annealing Furnaces",
+            "descr": "Annealing and drying furnace heaters are high temperature ceramic heaters manufactured with open resistive spirals in a flat ceramic body. They are used in ovens in which the annealing or drying of various products takes place. Attention! Heating elements for annealing and drying ovens are installed vertically only. When operating heating elements, it is necessary to exclude the possibility of foreign objects coming into contact with the heating element."
+          },
+          "dryHeaters": {
+            "name":"Dry Heaters",
+            "descr": "This heating element consists of high-strength Rescal wires placed in the grooves of special cylindrical ceramic elements. The spiral of cylindrical heating elements is open, therefore, when operating the heating element, it is necessary to ensure the absence of contaminating materials that could adversely affect the operation of the heating element (rust, oil and any other liquid). Dry heating elements can be used both to heat gases (direct heating) and to heat liquids (indirect heating). When using a dry heating element as an indirect fluid heater, it must be enclosed in a metal, ceramic, or other shell (also called glass ). The choice of glass material depends on the type of liquid to be heated. Installation in the case will bring the heating element many advantages."
+          }
+        }
+      }
     }
+  
   },
   "flexibleHeaters": {
-    "descr": "Flexible heating elements have a small overall size, high flexibility and several connection types. It is very convenient to use flexible moldable heaters in your work, as they provide uniform heating over the entire surface of the mold and do not require additional thermal insulation. It can be equipped with built-in thermocouple sensors that will monitor the heating temperature. Flexible heating elements are used in molds and hot runner systems. The main advantages of such a heater are undeniable: the ability to bend in any direction, high temperature and uniform heating of the entire surface of the mold."
-  },
-  "components": {
-    "networkConnectors": {
-      "descr": "Heat resistant connectors are used at temperatures up to 100°C to 500°C. They are made from heat-resistant materials, have cable bending protection and also have high electrical performance. You can order from us and select a network connector specifically suited to your technical task."
-    },
-    "thermocouples": {
-      "descr": "Principle of operation of thermocouples. The main principle of operation of a thermocouple is that heating or cooling of contacts between conductors presents differences in the composition of the metal, and therefore in chemical and physical properties, which are accompanied by the appearance of a force thermoelectromotive. As you know, thermocouple contacts are made of two types of metals connected at one end. The connected part is installed where the temperature is measured, and the two free ends are connected to the measuring device",
-      "typeK": {
-        "descr": "A modern K-type thermocouple temperature sensor can be manufactured in different designs. The main parameters of choice: rod diameter and length, wire length, thread diameter and temperature range. When ordering a thermocouple, be sure to indicate these parameters. The K or TXA thermocouple is made of chromel-alumel material. The temperature limit of this sensor is -200°C to +1000°C, but the actual measuring temperature depends on the diameter of the thermoelectrode wire. Check thermocouple K for operation in neutral or excess oxygen environments."
-      },
-      "typeJ": {
-        "descr": "The Type J thermocouple is unique in that it is used in a rarefied atmosphere. The maximum operating temperature of thermocouple J is -200 to 700 ºC, because at higher temperatures the wires will immediately oxidize and affect the final data. The thermocouple is made of solid iron."
+    "categories":{
+      "flexibleHeaters":{
+        "name":"Flexible Heaters",
+        "subcategories":{
+          "flexibleHeaters":{
+            "name":"Flexible Heaters"
+          }
+        }
       }
     },
-    "pads": {
-      "descr": "Heat-resistant terminal blocks, designed and pre-rated for use with dimensional wires, are often used in applications where wires may be exposed to high temperatures."
-    },
-    "bands": {
-      "descr": "Ceramic tape heaters are industrial heaters intended for heating flat or cylindrical surfaces. Thanks to their flexible design, they can adapt to the shape of the heating surface. Often used in cases where it is impossible to use suitable clamps or flat heaters."
+    "name": "Flexible Heaters",
+    "descr": "Flexible heating elements have a small overall size, high flexibility and several connection types. It is very convenient to use flexible moldable heaters in your work, as they provide uniform heating over the entire surface of the mold and do not require additional thermal insulation. It can be equipped with built-in thermocouple sensors that will monitor the heating temperature. Flexible heating elements are used in molds and hot runner systems. The main advantages of such a heater are undeniable: the ability to bend in any direction, high temperature and uniform heating of the entire surface of the mold."
+  },
+
+  "components": {
+    "name": "Accesories",
+    "categories":{
+      "networkConnectors": {
+        "name":"Network Connectors",
+        "descr": "Heat resistant connectors are used at temperatures up to 100°C to 500°C. They are made from heat-resistant materials, have cable bending protection and also have high electrical performance. You can order from us and select a network connector specifically suited to your technical task."
+      },
+      "thermocouples": {
+        "name":"Thermocouples",
+        "descr": "Principle of operation of thermocouples. The main principle of operation of a thermocouple is that heating or cooling of contacts between conductors presents differences in the composition of the metal, and therefore in chemical and physical properties, which are accompanied by the appearance of a force thermoelectromotive. As you know, thermocouple contacts are made of two types of metals connected at one end. The connected part is installed where the temperature is measured, and the two free ends are connected to the measuring device",
+        "typeK": {
+          "descr": "A modern K-type thermocouple temperature sensor can be manufactured in different designs. The main parameters of choice: rod diameter and length, wire length, thread diameter and temperature range. When ordering a thermocouple, be sure to indicate these parameters. The K or TXA thermocouple is made of chromel-alumel material. The temperature limit of this sensor is -200°C to +1000°C, but the actual measuring temperature depends on the diameter of the thermoelectrode wire. Check thermocouple K for operation in neutral or excess oxygen environments."
+        },
+        "typeJ": {
+          "descr": "The Type J thermocouple is unique in that it is used in a rarefied atmosphere. The maximum operating temperature of thermocouple J is -200 to 700 ºC, because at higher temperatures the wires will immediately oxidize and affect the final data. The thermocouple is made of solid iron."
+        }
+      },
+      "Pads": {
+        "name":"Pads",
+        "descr": "Heat-resistant terminal blocks, designed and pre-rated for use with dimensional wires, are often used in applications where wires may be exposed to high temperatures.",
+        "subcategories":{
+          "openTwoPole":{
+            "name":"Open Two Pole"
+          },
+          "openThreePole":{
+            "name":"Open Three Pole"
+          },
+          "openFourPole":{
+            "name":"Open Four Pole"
+          },
+          "closedTwoPole":{
+            "name":"Closed Two Pole"
+          }
+        }
+      },
+      "bands": {
+        "name":"Bands",
+        "descr": "Ceramic tape heaters are industrial heaters intended for heating flat or cylindrical surfaces. Thanks to their flexible design, they can adapt to the shape of the heating surface. Often used in cases where it is impossible to use suitable clamps or flat heaters."
+      }
     }
   }
 }

@@ -1,11 +1,11 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 const CategoriesList = () => {
   const categories = [
     {
-      "Industrial Heating Elements": {
+      "IndustrialHeatingElements": {
         mainPh:
           "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
-
         categories: {
           extruderRingHeaters: {
             mainPh:
@@ -191,6 +191,7 @@ const CategoriesList = () => {
         mainPh: "../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
         categories: {
           ceramic: {
+            
             mainPh:
               "../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
             descr: "InfraredHeatingElements.ceramic.descr",
@@ -208,6 +209,7 @@ const CategoriesList = () => {
                     maxVolt: "12-400V",
                     maxTempr: "700°C",
                     infraredWaveRange: "1.0 – 10.0 microns",
+                    descr: "InfraredHeatingElements.spherical.first.descr"
                   },
                   second: {
                     mainPh:
@@ -322,7 +324,7 @@ const CategoriesList = () => {
           },
         },
       
-      "Ceramic Heating Elements": {
+      "ceramicHeatingElements": {
         mainPh:
           "../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/1.png",
         categories: {
@@ -373,7 +375,7 @@ const CategoriesList = () => {
           },
         },
       },
-      "Flexible Heaters": {
+      "flexibleHeaters": {
         mainPh: "../src/assets/img/FlexibleHeaters/9.png",
         categories: {
           flexibleHeaters: {
@@ -403,7 +405,7 @@ const CategoriesList = () => {
           },
         },
       },
-      "Heating Element Materials": {
+      "components": {
         mainPh: "../src/assets/img/Accesories/pads/1.png",
         categories: {
           networkConnectors: {
@@ -546,7 +548,7 @@ const CategoriesList = () => {
       },
     },
   ];
-
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
   const [selectedSubsubcategory, setSelectedSubsubcategory] = useState(null);
@@ -582,21 +584,27 @@ const CategoriesList = () => {
     const subsubcategory = subcategory.subcategories[selectedSubsubcategory];
     if (!subsubcategory || !subsubcategory.subcategories) return null;
 
-    return Object.keys(subsubcategory.subcategories).map((subsubsubcategoryName) => {
-      const subsubsubcategory = subsubcategory.subcategories[subsubsubcategoryName];
+    return Object.keys(subsubcategory.subcategories).map((subsubsubcategoryKey) => {
+      const subsubsubcategory = subsubcategory.subcategories[subsubsubcategoryKey];
       return (
         <div
           className="cursor-pointer"
-          key={subsubsubcategoryName}
-          onClick={() => handleSubsubsubcategoryClick(subsubsubcategoryName)}
+          key={subsubsubcategoryKey}
+          onClick={() => handleSubsubsubcategoryClick(subsubsubcategoryKey)}
         >
           <div className="text-center">
             <img
               src={subsubsubcategory.mainPh}
-              alt={subsubsubcategoryName}
+              alt={subsubsubcategory.name}
               className="h-[180px] w-[180px]"
             />
-            <h3>{subsubsubcategoryName}</h3>
+            <h3>{t(`${selectedCategory}.categories.${selectedSubcategory}.subcategories.${selectedSubsubcategory}.subcategories.${subsubsubcategoryKey}.name`)}</h3>
+            <button 
+              className="mt-2 px-4 py-2 w-full bg-[#279CD5] text-white rounded"
+              onClick={() => handleSubsubsubcategoryClick(subsubsubcategoryKey)}
+            >
+              More Info
+            </button>
           </div>
         </div>
       );
@@ -610,21 +618,21 @@ const CategoriesList = () => {
     const subcategory = category.categories[selectedSubcategory];
     if (!subcategory || !subcategory.subcategories) return null;
 
-    return Object.keys(subcategory.subcategories).map((subsubcategoryName) => {
-      const subsubcategory = subcategory.subcategories[subsubcategoryName];
+    return Object.keys(subcategory.subcategories).map((subsubcategoryKey) => {
+      const subsubcategory = subcategory.subcategories[subsubcategoryKey];
       return (
         <div
           className="cursor-pointer"
-          key={subsubcategoryName}
-          onClick={() => handleSubsubcategoryClick(subsubcategoryName)}
+          key={subsubcategoryKey}
+          onClick={() => handleSubsubcategoryClick(subsubcategoryKey)}
         >
           <div className="text-center">
             <img
               src={subsubcategory.mainPh}
-              alt={subsubcategoryName}
+              alt={subsubcategory.name}
               className="h-[180px] w-[180px]"
             />
-            <h3>{subsubcategoryName}</h3>
+            <h3>{t(`${selectedCategory}.categories.${selectedSubcategory}.subcategories.${subsubcategoryKey}.name`)}</h3>
           </div>
         </div>
       );
@@ -637,21 +645,21 @@ const CategoriesList = () => {
     const category = categories[0][selectedCategory];
     if (!category || !category.categories) return null;
 
-    return Object.keys(category.categories).map((subcategoryName) => {
-      const subcategory = category.categories[subcategoryName];
+    return Object.keys(category.categories).map((subcategoryKey) => {
+      const subcategory = category.categories[subcategoryKey];
       return (
         <div
           className="cursor-pointer"
-          key={subcategoryName}
-          onClick={() => handleSubcategoryClick(subcategoryName)}
+          key={subcategoryKey}
+          onClick={() => handleSubcategoryClick(subcategoryKey)}
         >
           <div className="text-center">
             <img
               src={subcategory.mainPh}
-              alt={subcategoryName}
+              alt={subcategory.name}
               className="h-[180px] w-[180px]"
             />
-            <h3>{subcategoryName}</h3>
+            <h3>{t(`${selectedCategory}.categories.${subcategoryKey}.name`)}</h3>
           </div>
         </div>
       );
@@ -659,21 +667,23 @@ const CategoriesList = () => {
   };
 
   const renderCategories = () => {
-    return Object.keys(categories[0]).map((categoryName) => {
-      const category = categories[0][categoryName];
+    return Object.keys(categories[0]).map((categoryKey) => {
+      const category = categories[0][categoryKey];
       return (
         <div
           className="cursor-pointer"
-          key={categoryName}
-          onClick={() => handleCategoryClick(categoryName)}
+          key={categoryKey}
+          onClick={() => handleCategoryClick(categoryKey)}
         >
           <div className="text-center border border-black p-2 rounded-sm bg-white">
-            <img
-              src={category.mainPh}
-              alt={categoryName}
-              className="h-[220px] w-[220px] bg-center"
-            />
-            <h2 className="font-serif">{categoryName}</h2>
+            <div className="flex justify-center">
+              <img
+                src={category.mainPh}
+                alt={category.name}
+                className="text-center h-[220px] w-[220px] bg-center"
+              />
+            </div>
+            <h2 className="font-serif">{t(`${categoryKey}.name`)}</h2>
           </div>
         </div>
       );
@@ -691,16 +701,16 @@ const CategoriesList = () => {
     if (!subsubsubcategory) return null;
 
     return (
-      <div>
-        <h3>{selectedSubsubsubcategory}</h3>
+      <div className="bg-[#F5F5F5]">
+        <h3 className="capitalize text-2xl font-thin text-[#818590]">{subsubsubcategory.name}</h3>
         <div className="text-center flex">
           <img
             src={subsubsubcategory.mainPh}
-            alt={selectedSubsubsubcategory}
+            alt={subsubsubcategory.name}
             className="h-[250px] w-[300px]"
           />
-          <div className="text-left items-center ml-[15%]">
-            <ul>
+          <div className="text-left bg-[#F5F5F5] items-center ml-[15%]">
+            <ul className="capitalize">
               {Object.entries(subsubsubcategory).map(([key, value]) => {
                 if (key === 'mainPh' || key === 'ph' || key === 'descr') return null;
                 return (
@@ -713,7 +723,7 @@ const CategoriesList = () => {
             {subsubsubcategory.descr && (
               <h3 className="mt-[12%] list-none">
                 <li key="descr">
-                  descr: <br /> {subsubsubcategory.descr}
+                  {t(`categories.${selectedCategory}.${selectedSubcategory}.${selectedSubsubcategory}.${selectedSubsubsubcategory}.descr`)}
                 </li>
               </h3>
             )}
@@ -732,25 +742,25 @@ const CategoriesList = () => {
     const subcategory = category.categories[selectedSubcategory];
     if (!subcategory || !subcategory.subcategories) return null;
 
-    const subsubcategory = subcategory.subcategories[selectedSubsubcategory];
+    const subsubcategory =  subcategory.subcategories[selectedSubsubcategory];
     if (!subsubcategory) return null;
 
     return (
       <div>
-        <h3>{selectedSubsubcategory}</h3>
+        <h3 className="capitalize text-2xl font-thin text-[#818590]">{subsubcategory.name}</h3>
         <div className="text-center flex">
           <img
             src={subsubcategory.mainPh}
-            alt={selectedSubsubcategory}
-            className="h-[250px] w-[300px] "
+            alt={subsubcategory.name}
+            className="h-[310px] w-[330px] "
           />
-          <div className="text-left items-center ml-[15%]">
+          <div className="text-left bg-[#F5F5F5] items-center ml-[15%]">
             <ul className="">
               {Object.entries(subsubcategory).map(([key, value]) => {
                 if (key === 'mainPh' || key === 'ph' || key === 'descr')
                   return null;
                 return (
-                  <li key={key}>
+                  <li className="capitalize mb-1" key={key}>
                     {key}: {value}
                   </li>
                 );
@@ -767,6 +777,13 @@ const CategoriesList = () => {
               })}
             </h3>
           </div>
+        </div>
+        <div className="flex justify-center gap-8 my-8">
+          <h3 className="mr-4"> Details can be obtained from the 
+            <br/>  manager by phone +33 749 143 577 
+          </h3>
+          <button className="p-4 border-[#279CD5] border text-[#279CD5] w-[220px] hover:text-black">Ask for consultations</button>
+          <button className="bg-[#279CD5] p-4 text-white w-[220px] hover:border-black hover:border">Send request</button>
         </div>
       </div>
     );

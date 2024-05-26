@@ -2,25 +2,15 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
-import en from "../locales/en.json";
-import fr from "../locales/fr.json";
 import { IoMenu } from "react-icons/io5";
-
 import logo from "../assets/Logo.png";
 
 const Header = () => {
-  const { t, i18n } = useTranslation("translation", {
-    defaultNS: "translation",
-    resources: {
-      en: { translation: en },
-      fr: { translation: fr },
-    },
-  });
-
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(
-    localStorage.getItem("selectedLanguage") || "Fr"
+    localStorage.getItem("selectedLanguage") || "fr"
   );
 
   useEffect(() => {
@@ -42,7 +32,7 @@ const Header = () => {
   };
 
   return (
-    <div className="mx-auto container">
+    <div className="mx-auto">
       <div className="flex justify-between lg:justify-center items-center m-8 md:mx-16">
         <Link
           to="/"
@@ -102,14 +92,14 @@ const Header = () => {
             {isOpen && (
               <div className="absolute mt-2 w-[60px] text-[#279CD5] border-2 border-[#279CD5] rounded-2xl shadow-lg z-10">
                 <button
-                  onClick={() => selectLanguage("En")}
+                  onClick={() => selectLanguage("en")}
                   className="block w-full py-2 text-[#279CD5] text-center focus:outline-none"
                 >
                   En
                 </button>
                 <button
-                  onClick={() => selectLanguage("Fr")}
-                  className="block w-full  py-2 text-center  text-[#279CD5] focus:outline-none"
+                  onClick={() => selectLanguage("fr")}
+                  className="block w-full py-2 text-center text-[#279CD5] focus:outline-none"
                 >
                   Fr
                 </button>
