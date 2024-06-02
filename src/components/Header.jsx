@@ -32,13 +32,13 @@ const Header = () => {
   };
 
   return (
-    <div className="mx-auto">
-      <div className="flex justify-between lg:justify-center items-center m-8 md:mx-16">
+    <div className="mx-auto lg:max-w-screen-lg px-4 lg:px-0">
+      <div className="flex mx-auto justify-between items-center my-8 lg:mx-8">
         <Link
           to="/"
           smooth={true}
           duration={500}
-          className="text-[20px] md:text-2xl lg:text-xl lg:mr-[80px]"
+          className="text-[20px] md:text-2xl lg:text-xl lg:mr-8"
           onClick={() => scroll.scrollToTop()}
         >
           <img className="w-[164px] h-[95px]" src={logo} alt="" />
@@ -67,8 +67,8 @@ const Header = () => {
           </ScrollLink>
         </div>
 
-        <div className="flex md:flex gap-[24px] items-center">
-          <div className="mx-2 md:mx-8 relative">
+        <div className="flex md:flex gap-4 items-center">
+          <div className="relative">
             <button
               onClick={toggleDropdown}
               className="px-2 py-2 text-[#279CD5] border-2 border-[#279CD5] rounded-2xl focus:outline-none focus:bg-gray-300 flex items-center"

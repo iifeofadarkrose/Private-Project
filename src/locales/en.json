@@ -13,7 +13,9 @@
   "contInt": "Contact information",
   "social": "Social links",
   "cont": "Feel free to contact us any time. We will get back to you as soon as we can.",
-
+  "extruderRingHeaters": {
+    "name": "Extruder Ring Heaters"
+  },
   "IndustrialHeatingElements": {
     "name": "Industrial Heating Elements",
     "categories": {

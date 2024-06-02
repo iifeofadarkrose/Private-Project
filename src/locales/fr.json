@@ -14,7 +14,9 @@
  "social":"Liens sociaux",
  "cont":"N'hésitez pas à nous contacter à tout moment. Nous vous répondrons dès que possible.",
  
- 
+ "extruderRingHeaters": {
+  "name": "Réchauffeurs d'anneaux d'extrudeuse"
+},
 
 "IndustrialHeatingElements": {
   "name":"ÉLÉMENTS CHAUFFANTS INDUSTRIELS",

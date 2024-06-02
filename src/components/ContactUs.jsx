@@ -37,11 +37,11 @@ const ContactUs = () => {
         <form className="flex max-w-[120px] md:max-w-[200px] lg:max-w-[350px]">
           <div>
             <h1 className="font-semibold md:font-light md:text-[24px] lg:text-[32px] "> {t("contact_us")}</h1>
-            <p className="text-[6px] text-[#828282] md:text-[8px] lg:text-[10px]">
+            <p className="text-[6px] text-[#828282] md:text-[8px] lg:text-[19px]">
             {t("cont")}
             </p>
             <input
-              className="my-[8px] h-[16px]  lg:text-[12px] lg:h-[50px] w-[120px] md:w-[200px] lg:w-[350px] text-[#828282] font-thin border-b  border-gray bg-inherit text-[8px]"
+              className="my-[8px] h-[16px]  lg:text-[20px] lg:h-[50px] w-[120px] md:w-[200px] lg:w-[350px] text-[#828282] font-thin border-b  border-gray bg-inherit text-[8px]"
               value={formik.values.email}
               onChange={formik.handleChange}
               id="email"
@@ -50,7 +50,7 @@ const ContactUs = () => {
             />
 
             <input
-              className="my-[8px] h-[16px] lg:h-[50px] lg:text-[12px]  w-[120px] md:w-[200px] lg:w-[350px] border-b border-gray bg-inherit text-[8px]"
+              className="my-[8px] h-[16px] lg:h-[50px] lg:text-[20px]  w-[120px] md:w-[200px] lg:w-[350px] border-b border-gray bg-inherit text-[8px]"
               value={formik.values.name}
               onChange={formik.handleChange}
               id="name"
@@ -59,7 +59,7 @@ const ContactUs = () => {
             />
 
             <input
-              className="my-[8px] h-[16px] lg:h-[50px] lg:text-[12px]  w-[120px] md:w-[200px] lg:w-[350px] border-b border-gray bg-inherit text-[8px]"
+              className="my-[8px] h-[16px] lg:h-[50px] lg:text-[20px]  w-[120px] md:w-[200px] lg:w-[350px] border-b border-gray bg-inherit text-[8px]"
               value={formik.values.message}
               onChange={formik.handleChange}
               id="message"
@@ -81,29 +81,29 @@ const ContactUs = () => {
         <h2 className="mt-[12px] ml-[12px] text-[10px] text-white md:text-[12px] lg:text-[24px]">
         {t("contInt")}
         </h2>
-        <div className="gap-4 mt-2">
-          <div className="flex items-center mb-1">
+        <div className="gap-4 mt-4">
+          <div className="flex items-center mb-1 lg:mb-4">
             <IoMdMail className="ml-[12px] fill-white p-1 w-[18px] h-[18px] md:w-[20px] md:h-[20px] lg:w-[32px] lg:h-[32px] border rounded-md " />
             <p className="text-[8px] ml-[5px] text-white md:text-[10px] lg:text-[16px]">
               info.ihtcompany@gmail.com
             </p>
           </div>
-          <div className="flex items-center mb-1">
+          <div className="flex items-center mb-1 lg:mb-4">
             <FaPhoneVolume className="ml-[12px] fill-white p-1 w-[18px] h-[18px] md:w-[20px] md:h-[20px] lg:w-[32px] lg:h-[32px] border rounded-md " />
             <p className="text-[8px] ml-[5px] text-white md:text-[10px] lg:text-[16px]">+33 749 143 577</p>
           </div>
-          <div className="flex items-center mb-1">
+          <div className="flex items-center mb-1 lg:mb-4">
             <HiMiniMapPin className="ml-[12px]  fill-white p-1 w-[18px] h-[18px] md:w-[20px] md:h-[20px] lg:w-[32px] lg:h-[32px] border rounded-md " />
             <p className="text-[6px] ml-[5px] text-white md:text-[10px] lg:text-[16px]">
                France, Le Havre
             </p>
           </div>
           <div className="flex items-center mb-1">
-            <FaRegClock className="ml-[12px]  fill-white p-1 w-[18px] h-[18px] md:w-[20px] md:h-[20px] lg:w-[32px] lg:h-[32px]  border rounded-md " />
+            <FaRegClock className="ml-[12px] fill-white p-1 w-[18px] h-[18px] md:w-[20px] md:h-[20px] lg:w-[32px] lg:h-[32px]  border rounded-md " />
             <p className="text-[8px] ml-[5px] text-white md:text-[10px] lg:text-[16px]">9:00-18:00</p>
           </div>
         </div>
-        <h1 className="ml-[12px] mb-1 text-white text-[10px] md:text-[12px] lg:text-[16px]">{t("social")}</h1>
+        <h1 className="ml-[12px] mb-1 text-white text-[10px] md:text-[12px] lg:text-[16px] my-6">{t("social")}</h1>
         <div className="flex gap-2 ml-[12px]">
           <CiFacebook className="border mb-1 p-1 border-white rounded-md w-[22px] h-[22px] md:w-[26px] md:h-[26px] fill-white lg:w-[40px] lg:h-[40px]" />
           <FaInstagram className="border mb-1 p-1 border-white rounded-md w-[22px] h-[22px] md:w-[26px] md:h-[26px] fill-white lg:w-[40px] lg:h-[40px]" />
