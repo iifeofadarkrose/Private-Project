@@ -17,6 +17,24 @@
  "extruderRingHeaters": {
   "name": "Réchauffeurs d'anneaux d'extrudeuse"
 },
+"cartridgeHeatingElements":{
+  "name":"Éléments chauffants en cartouche",
+  "subcategories": {
+    "cartridgeHeatingElements":{
+      "name":"Éléments chauffants en cartouche",
+      "descr": "Les cartouches chauffantes sont des éléments chauffants électriques cylindriques. Principalement utilisés pour chauffer des solides tels que des presses à injection, des plaques chauffantes ou divers outils, ils peuvent également être utilisés pour chauffer de l'eau ou des gaz dans certaines conditions. Largement utilisés pour la fabrication de pièces en plastique et en caoutchouc dans la voiture. ou dans l'industrie agro-alimentaire, etc., on les trouve également couramment dans les industries chimique, électronique, médicale, de l'emballage et nucléaire."
+    }
+  }
+}, 
+"spiralHeaters":{
+  "name":"Réchauffeurs en spirale",
+  "subcategories":{
+    "spiralHeaters":{
+      "name":"Réchauffeurs en spirale",
+      "descr": "Les éléments chauffants en spirale ont une densité de puissance élevée. Par conséquent, ils sont le plus souvent utilisés dans des applications où une température et une puissance élevées sont requises, mais où l’espace est limité. Tout d’abord, les systèmes à canaux chauds sont équipés de réchauffeurs en spirale. La température maximale de surface de ces éléments chauffants peut atteindre 500°C pour une densité de puissance de 6 W/cm2."
+    } 
+  }
+},
 
 "IndustrialHeatingElements": {
   "name":"ÉLÉMENTS CHAUFFANTS INDUSTRIELS",

@@ -15,6 +15,24 @@
   "cont": "Feel free to contact us any time. We will get back to you as soon as we can.",
   "extruderRingHeaters": {
     "name": "Extruder Ring Heaters"
+  },  "cartridgeHeatingElements":{
+    "name":"Cartridge Heating Elements",
+    "subcategories": {
+      "cartridgeHeatingElements":{
+        "name":"Cartridge Heating Elements",
+        "descr": "Cartridge heaters are cylindrical electric heating elements. Mainly used to heat solids such as injection presses, hot plates or various tools, they can also be used to heat water or gases under certain conditions. Widely used for manufacturing plastic and rubber parts in car. or in the food industry, etc., they are also commonly found in the chemical, electronics, medical, packaging and nuclear industries."
+
+      }
+    }
+  },
+  "spiralHeaters":{
+    "name":"Spiral Heaters",
+    "subcategories":{
+      "spiralHeaters":{
+        "name":"Spiral Heaters",
+        "descr": "Spiral heating elements have high power density. Therefore, they are most often used in applications where high temperature and power are required, but space is limited. First of all, hot runner systems are equipped with spiral heaters. The maximum surface temperature of these heating elements can reach 500°C for a power density of 6 W/cm2."
+      } 
+    }
   },
   "IndustrialHeatingElements": {
     "name": "Industrial Heating Elements",

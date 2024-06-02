@@ -34,7 +34,7 @@ const Categories = () => {
   return (
     <div className="md:mx-[5%] lg:mx-[15%]">
       <CatBlock onCategoryClick={handleCategoryClick} />
-      <BestSeller />
+      {!selectedCategory && <BestSeller />}
       <CategoriesList
         selectedCategory={selectedCategory}
         selectedSubcategory={selectedSubcategory}

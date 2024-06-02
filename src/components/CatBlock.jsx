@@ -20,7 +20,7 @@ const CatBlock = ({ onCategoryClick }) => {
 
   const renderCategories = () => {
     return (
-      <div className="absolute bg-white border mt-1 rounded-lg shadow-lg w-full max-h-64 overflow-y-auto z-50">
+      <div className="absolute top-[100%] ml-4 bg-white border mt-1 rounded-lg shadow-lg max-h-64 overflow-y-auto z-50  w-[300px]">
         {Object.keys(categories).map((categoryKey) => (
           <div
             key={categoryKey}
