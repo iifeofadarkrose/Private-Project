@@ -107,17 +107,21 @@ const CategoriesList = ({
       if (categoryKey === "IndustrialHeatingElements") {
         return null;
       }
-
+  
       const category = categories[categoryKey];
-      let imgStyles;
+      let imgClasses;
+  
+      // Define responsive styles using Tailwind CSS classes
+      imgClasses = "object-contain";
+  
       if (categoryKey === "Infrared Heaters") {
-        imgStyles = { width: '450px', height: '240px' };
+        imgClasses += " w-[289px] h-[250px] sm:w-[350px] sm:h-[200px] md:w-[450px] md:h-[240px]";
       } else if (categoryKey === "extruderRingHeaters") {
-        imgStyles = { width: '450px', height: '160px' };
+        imgClasses += " w-[289px] h-[250px] sm:w-[350px] sm:h-[200px] md:w-[450px] md:h-[160px]";
       } else {
-        imgStyles = { width: '289px', height: '250px' };
+        imgClasses += " w-[289px] h-[250px] sm:w-[350px] sm:h-[200px] md:w-[289px] md:h-[250px]";
       }
-
+  
       return (
         <div
           className="cursor-pointer"
@@ -125,12 +129,11 @@ const CategoriesList = ({
           onClick={() => onCategoryClick(categoryKey)}
         >
           <div className="text-center hover:border-[1px] hover:border-[#409EFF] p-2 rounded-sm bg-white h-[300px] flex flex-col justify-center items-center">
-            <div className="flex justify-center items-center flex-grow">
+            <div className="flex justify-center items-center flex-grow"> 
               <img
                 src={category.mainPh}
                 alt={category.name}
-                style={imgStyles}
-                className="object-contain"
+                className={imgClasses}
               />
             </div>
             <h2 className="font-serif text-[#486284] py-2 border-t-2 border-t-[#409EFF] w-full text-center">
@@ -141,6 +144,7 @@ const CategoriesList = ({
       );
     });
   };
+  
 
   const renderSelectedSubsubsubcategory = () => {
     if (!selectedSubsubsubcategory) return null;
@@ -231,7 +235,7 @@ const CategoriesList = ({
   };
 
   return (
-    <div className="flex mx-auto flex-wrap gap-5 justify-center w-[960px]">
+    <div className="flex mx-auto flex-wrap gap-5 justify-center max-w-[960px]">
       {selectedSubsubsubcategory
         ? renderSelectedSubsubsubcategory()
         : selectedSubsubcategory && categories[selectedCategory]?.categories[selectedSubcategory]?.subcategories[selectedSubsubcategory]?.subcategories
