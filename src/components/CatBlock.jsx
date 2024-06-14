@@ -35,16 +35,16 @@ const CatBlock = ({ onCategoryClick }) => {
   };
 
   return (
-    <div className="flex items-center font-light mx-auto my-12 lg:w-[1000px] container relative">
+    <div className="flex items-center  font-light mx-auto mt-12 lg:w-[1000px] container relative p-3">
       <button 
         onClick={handleButtonClick} 
-        className="flex justify-between items-center mx-[2%] text-white bg-[#279CD5] md:text-[15px] w-[160px] h-[40px] md:w-[220px] md:h-[40px] rounded-t-lg"
+        className="flex justify-between items-center  text-white bg-[#279CD5] md:text-[15px] w-[160px] h-[40px] md:w-[220px] md:h-[40px] rounded-t-lg"
       >
         <div className="ml-[12px] text-[20px] md:text-xl">Categories</div>
-        <IoMenu className="mr-[12px] w-[16px] h-[16px]" />
+        <IoMenu className="mr-[12px] w-[20px] h-[20px] md:w-[24px] md:h-[24px] lg:w-[26x] lg:h-[26px]" />
       </button>
       {dropdownVisible && renderCategories()}
-      <h1 className="text-xl md:text-3xl">Popular Products</h1>
+      <h1 className="text-xl md:text-3xl ml-[2%]">Popular Products</h1>
     </div>
   );
 };

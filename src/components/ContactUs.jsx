@@ -32,18 +32,18 @@ const ContactUs = () => {
   });
 
   return (
-    <div className="flex flex-col md:flex-row mx-auto lg:max-w-[1024px]">
-      <div className="m-8 mx-auto w-[340px] md:w-[300px] lg:w-[350px]">
+    <div id="contact" className="flex flex-col justify-between md:flex-row mx-auto lg:w-[960px]">
+      <div className="m-12 mx-auto w-[340px] md:w-[300px] lg:w-[460px]">
         <form className="flex flex-col">
-          <div>
-            <h1 className="font-semibold md:font-light text-[32px] md:text-[24px] lg:text-[32px]">
+          <div className="my-4">
+            <h1 className="font-semibold md:font-light text-[30px] md:text-[26px] lg:text-[32px] mb-2">
               {t("contact_us")}
             </h1>
-            <p className="text-[12px] text-[#828282] md:text-[8px] lg:text-[19px]">
+            <p className="text-[14px] text-[#828282] md:text-[16px] lg:text-[22px] mb-4">
               {t("cont")}
             </p>
             <input
-              className="my-[8px] h-[44px] lg:text-[20px] lg:h-[50px] w-full text-[#828282] font-thin border-b border-gray bg-inherit text-[18px] md:text-[8px]"
+              className="my-[8px] h-[44px] lg:text-[18px] lg:h-[50px] w-full text-[#828282] font-thin border-b border-[#828282] bg-inherit text-[18px] md:text-[16px] focus:border-[#279CD5] p-1"
               value={formik.values.email}
               onChange={formik.handleChange}
               id="email"
@@ -52,7 +52,7 @@ const ContactUs = () => {
             />
 
             <input
-              className="my-[8px] h-[44px] lg:h-[50px] lg:text-[20px] w-full border-b border-gray bg-inherit text-[18px] md:text-[8px]"
+              className="my-[8px] h-[44px] lg:h-[50px] lg:text-[18px] w-full border-b border-[#828282] bg-inherit text-[18px] md:text-[16px] focus:border-[#279CD5] p-1"
               value={formik.values.name}
               onChange={formik.handleChange}
               id="name"
@@ -61,7 +61,7 @@ const ContactUs = () => {
             />
 
             <input
-              className="my-[8px] h-[44px] lg:h-[50px] lg:text-[20px] w-full border-b border-gray bg-inherit text-[18px] md:text-[8px]"
+              className="my-[8px] h-[44px] lg:h-[50px] lg:text-[18px] w-full border-b border-[#828282] bg-inherit text-[18px] md:text-[16px] focus:border-[#279CD5] p-1"
               value={formik.values.message}
               onChange={formik.handleChange}
               id="message"
@@ -71,7 +71,7 @@ const ContactUs = () => {
           </div>
         </form>
         <button
-          className="w-full rounded-[5px] h-[44px] md:h-[30px] bg-[#279CD5] font-medium text-[18px] md:text-[8px] text-white lg:text-[18px]"
+          className="w-full rounded-[5px] p-1 lg:h-[44px] md:h-[40px] bg-[#279CD5] font-medium text-[18px] md:text-[16px] text-white lg:text-[22px] hover:border-black border-[1px] hover:text-gray-200"
           type="submit"
         >
           {t("submit")}
@@ -80,37 +80,53 @@ const ContactUs = () => {
 
       {/* Contact information block */}
 
-      <div className="m-8 w-[340px] md:w-[300px] lg:w-[350px] bg-[#279CD5] rounded-md mx-auto">
-        <h2 className="mt-[12px] ml-[12px] text-[24px] text-white md:text-[12px] lg:text-[24px]">
+      <div className="m-[44px] w-[340px] md:w-[360px] lg:w-[460px] bg-[#279CD5] rounded-md mx-auto p-4">
+        <h2 className="mt-[12px] ml-[12px] text-[24px] text-white md:text-[20px] lg:text-[24px]">
           {t("contInt")}
         </h2>
         <div className="gap-4 mt-4">
           <div className="flex items-center mb-4 lg:mb-4">
-            <IoMdMail className="ml-[12px] fill-white p-1 w-[44px] h-[44px] md:w-[20px] md:h-[20px] lg:w-[32px] lg:h-[32px] border rounded-md" />
-            <p className="text-[18px] ml-[5px] text-white md:text-[10px] lg:text-[16px]">
-              info.ihtcompany@gmail.com
+            <IoMdMail className="ml-[12px] fill-white p-1 w-[44px] h-[44px] md:w-[32px] md:h-[32px] lg:w-[44px] lg:h-[44px] border rounded-md" />
+            <p className="text-[18px] ml-[10px] text-white md:text-[14px] lg:text-[18px]">
+            <span
+                className="hover:text-gray-300 cursor-pointer"
+                onClick={() => (window.location.href = "mailto:info.ihtcompany@gmail.com")}
+              >
+                info.ihtcompany@gmail.com
+              </span>
             </p>
           </div>
           <div className="flex items-center mb-4 lg:mb-4">
-            <FaPhoneVolume className="ml-[12px] fill-white p-1 w-[44px] h-[44px] md:w-[20px] md:h-[20px] lg:w-[32px] lg:h-[32px] border rounded-md" />
-            <p className="text-[18px] ml-[5px] text-white md:text-[10px] lg:text-[16px]">+33 749 143 577</p>
+            <FaPhoneVolume className="ml-[12px] fill-white p-1 w-[44px] h-[44px] md:w-[32px] md:h-[32px] lg:w-[44px] lg:h-[44px] border rounded-md" />
+            <p className="text-[18px] ml-[10px] text-white md:text-[14px] lg:text-[18px]">
+            <span
+              className="hover:text-gray-300 cursor-pointer"
+              onClick={() => (window.location.href = "tel:+33749143577")}
+            >
+              +33 749 143 577
+            </span>
+            </p>
           </div>
           <div className="flex items-center mb-4 lg:mb-4">
-            <HiMiniMapPin className="ml-[12px] fill-white p-1 w-[44px] h-[44px] md:w-[20px] md:h-[20px] lg:w-[32px] lg:h-[32px] border rounded-md" />
-            <p className="text-[18px] ml-[5px] text-white md:text-[10px] lg:text-[16px]">
+            <HiMiniMapPin className="ml-[12px] fill-white p-1 w-[44px] h-[44px] md:w-[32px] md:h-[32px] lg:w-[44px] lg:h-[44px] border rounded-md" />
+            <p className="text-[18px] ml-[10px] text-white md:text-[14px] lg:text-[18px]">
               France, Le Havre
             </p>
           </div>
           <div className="flex items-center mb-4">
-            <FaRegClock className="ml-[12px] fill-white p-1 w-[44px] h-[44px] md:w-[20px] md:h-[20px] lg:w-[32px] lg:h-[32px] border rounded-md" />
-            <p className="text-[18px] ml-[5px] text-white md:text-[10px] lg:text-[16px]">9:00-18:00</p>
+            <FaRegClock className="ml-[12px] fill-white p-1 w-[44px] h-[44px] md:w-[32px] md:h-[32px] lg:w-[44px] lg:h-[44px] border rounded-md" />
+            <p className="text-[18px] ml-[10px] text-white md:text-[14px] lg:text-[18px]">
+              9:00-18:00
+            </p>
           </div>
         </div>
-        <h1 className="ml-[12px] mb-1 text-white text-[24px] md:text-[12px] lg:text-[16px] my-6">{t("social")}</h1>
+        <h1 className="ml-[12px] text-white text-[24px] md:text-[12px] lg:text-[18px] my-2">
+          {t("social")}
+        </h1>
         <div className="flex gap-2 ml-[12px]">
-          <CiFacebook className="border mb-1 p-1 border-white rounded-md w-[44px] h-[44px] md:w-[26px] md:h-[26px] fill-white lg:w-[40px] lg:h-[40px]" />
-          <FaInstagram className="border mb-1 p-1 border-white rounded-md w-[44px] h-[44px] md:w-[26px] md:h-[26px] fill-white lg:w-[40px] lg:h-[40px]" />
-          <FaWhatsapp className="border mb-1 p-1 border-white rounded-md w-[44px] h-[44px] md:w-[26px] md:h-[26px] fill-white lg:w-[40px] lg:h-[40px]" />
+          <CiFacebook className="cursor-pointer border mb-1 p-1 border-white rounded-md w-[44px] h-[44px] md:w-[32px] md:h-[32px] fill-white lg:w-[44px] lg:h-[44px]" />
+          <FaInstagram className="cursor-pointer border mb-1 p-1 border-white rounded-md w-[44px] h-[44px] md:w-[32px] md:h-[32px] fill-white lg:w-[44px] lg:h-[44px]" />
+          <FaWhatsapp className="cursor-pointer border mb-1 p-1 border-white rounded-md w-[44px] h-[44px] md:w-[32px] md:h-[32px] fill-white lg:w-[44px] lg:h-[44px]" />
         </div>
       </div>
     </div>

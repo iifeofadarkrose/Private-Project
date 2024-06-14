@@ -1,17 +1,21 @@
+import { useState } from 'react';
 import Categories from "./components/Categories";
 import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
-import ContactInfo from "./components/ContactInfo";
 
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
   return (
     <>
       <Header />
-      <Categories/>
-      <AboutUs/>
-      <ContactUs/>
-      
+      <Categories
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
+      {!selectedCategory && <AboutUs />}
+      <ContactUs />
     </>
   );
 }

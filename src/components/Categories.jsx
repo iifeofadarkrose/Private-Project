@@ -3,8 +3,7 @@ import CatBlock from '../components/CatBlock';
 import BestSeller from './BestSeller';
 import CategoriesList from './CategoriesList';
 
-const Categories = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+const Categories = ({ selectedCategory, setSelectedCategory }) => {
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
   const [selectedSubsubcategory, setSelectedSubsubcategory] = useState(null);
   const [selectedSubsubsubcategory, setSelectedSubsubsubcategory] = useState(null);
@@ -31,10 +30,17 @@ const Categories = () => {
     setSelectedSubsubsubcategory(subsubsubcategoryName);
   };
 
+  // Handler for "More Info" button click
+  const handleMoreInfoClick = () => {
+    setSelectedCategory("IndustrialHeatingElements");
+    setSelectedSubcategory("flatHeatingElements");
+    // You can add more state updates here based on the specific data needed for your view
+  };
+
   return (
     <div className="md:mx-[5%] lg:mx-[15%]">
-      <CatBlock onCategoryClick={handleCategoryClick} />
-      {!selectedCategory && <BestSeller />}
+      <CatBlock onCategoryClick={handleCategoryClick} selectedSubsubcategory={selectedSubsubcategory} />
+      {!selectedCategory && <BestSeller onMoreInfoClick={handleMoreInfoClick} />}
       <CategoriesList
         selectedCategory={selectedCategory}
         selectedSubcategory={selectedSubcategory}

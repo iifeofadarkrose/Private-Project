@@ -1,12 +1,46 @@
 {
     "IndustrialHeatingElements":{
-       "mainPh":"../../src/assets/img/IndustrialHeatingElements/colc1.jpg",
+       "mainPh":"https://i.imgur.com/XOu6EJr.png",
        "categories":{
           "extruderRingHeaters":{
-             "mainPh":"../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
+             "mainPh":"https://i.imgur.com/XOu6EJr.png",
              "translationKey":"extruderRingHeaters",
              "subcategories":{
-                "bronze":{
+               "metal":{
+                  "descr":"extruderRingHeaters.metal.descr",
+                  "diameter":"25 - 300mm",
+                  "width":"20 – 90mm",
+                  "thickness":"3 - 4mm",
+                  "maxElPower":"4 W/cm",
+                  "maxVolt":"12, 24, 48, 110, 220/230, 400 (others on order)",
+                  "maxTempr":"350 °C",
+                  "extraDescr":"extruderRingHeaters.metal.extraDescr",
+                  "ph":[
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/1.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/2.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/3.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/4.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/5.png"
+                  ],
+                  "mainPh":"https://i.imgur.com/Ahua53g.png"
+               }, 
+               "ceramic":{
+                  "descr":"extruderRingHeaters.ceramic.descr",
+                  "diameter":"60 - 1000mm",
+                  "width":"30 – 500mm",
+                  "thickness":"10 - 12mm",
+                  "maxElPower":"9 W/cm",
+                  "maxVolt":"12, 24, 48, 110, 220/230, 400 (others on order)",
+                  "maxTempr":"500 °C",
+                  "ph":[
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/1.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/2.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/3.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/4.png"
+                  ],
+                  "mainPh":"https://i.imgur.com/wmQfEWY.png"
+               },
+               "bronze":{
                    "descr":"extruderRingHeaters.bronze.descr",
                    "diameter":"25 - 100mm",
                    "width":"20 – 90mm",
@@ -14,7 +48,7 @@
                    "maxElPower":"5 W/cm",
                    "maxVolt":"12, 24, 48, 110, 220/230, 400 (others on order)",
                    "maxTempr":"500 °C",
-                   "mainPh":"../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
+                   "mainPh":"https://i.imgur.com/XOu6EJr.png",
                    "ph":[
                       "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
                       "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/2.png",
@@ -22,49 +56,15 @@
                       "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/4.png",
                       "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/5.png"
                    ]
-                },
-                "ceramic":{
-                   "descr":"extruderRingHeaters.ceramic.descr",
-                   "diameter":"60 - 1000mm",
-                   "width":"30 – 500mm",
-                   "thickness":"10 - 12mm",
-                   "maxElPower":"9 W/cm",
-                   "maxVolt":"12, 24, 48, 110, 220/230, 400 (others on order)",
-                   "maxTempr":"500 °C",
-                   "ph":[
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/1.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/2.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/3.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/4.png"
-                   ],
-                   "mainPh":"../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/1.png"
-                },
-                "metal":{
-                   "descr":"extruderRingHeaters.metal.descr",
-                   "diameter":"25 - 300mm",
-                   "width":"20 – 90mm",
-                   "thickness":"3 - 4mm",
-                   "maxElPower":"4 W/cm",
-                   "maxVolt":"12, 24, 48, 110, 220/230, 400 (others on order)",
-                   "maxTempr":"350 °C",
-                   "extraDescr":"extruderRingHeaters.metal.extraDescr",
-                   "ph":[
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/1.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/2.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/3.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/4.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/5.png"
-                   ],
-                   "mainPh":"../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/1.png"
                 }
              }
           },
           "flatHeatingElements":{
-             "mainPh":"../src/assets/img/IndustrialHeatingElements/Flat/FlatAluminum/1.png",
+             "mainPh":"https://i.imgur.com/uluyvAS.jpeg",
              "translationKey":"flatHeatingElements",
              "subcategories":{
                 "aluminium":{
-                   "mainPh":"../../src/assets/img/IndustrialHeatingElements/Flat/FlatAluminum/1.png",
+                   "mainPh":"https://i.imgur.com/uluyvAS.jpeg",
                    "descr":"flatHeatingElements.aluminium.descr",
                    "width":"25 – 1000 mm",
                    "length":"40 - 1000 mm",
@@ -95,7 +95,7 @@
                       "../src/assets/img/IndustrialHeatingElements/Flat/FlatCeramic/4.png",
                       "../src/assets/img/IndustrialHeatingElements/Flat/FlatCeramic/5.png"
                    ],
-                   "mainPh":"../src/assets/img/IndustrialHeatingElements/Flat/FlatCeramic/1.png"
+                   "mainPh":"https://i.imgur.com/k31Dbv5.jpeg"
                 },
                 "metal":{
                    "descr":"flatHeatingElements.metal.descr",
@@ -112,82 +112,90 @@
                       "../src/assets/img/IndustrialHeatingElements/Flat/FlatMetal/4.png",
                       "../src/assets/img/IndustrialHeatingElements/Flat/FlatMetal/5.png"
                    ],
-                   "mainPh":"../src/assets/img/IndustrialHeatingElements/Flat/FlatMetal/1.png"
+                   "mainPh":"https://i.imgur.com/m9kQoq3.jpeg"
                 }
              }
           },
           "cartridgeHeatingElements":{
-             "mainPh":"../../src/assets/img/IndustrialHeatingElements/Сartridge/CartridgeHeaters/1.png",
-             "translationKey":"cartridgeHeatingElements",
-             "subcategories":{
-                "cartridgeHeatingElements":{
-                   "mainPh":"../../src/assets/img/IndustrialHeatingElements/Сartridge/CartridgeHeaters/1.png",
-                   "descr":"cartridgeHeatingElements.descr",
-                   "diameter":"3 - 50mm",
-                   "length":"40 - 1300mm",
-                   "maxElPower":"50 W/cm",
-                   "maxVolt":"V: 12, 24, 48, 110, 220/230, 400V",
-                   "maxTempr":"500 °C",
-                   "ph":[
-                      "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/1.png",
-                      "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/2.png",
-                      "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/3.png",
-                      "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/4.png",
-                      "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/5.png"
-                   ]
-                }
-             }
-          },
-          "spiralHeaters":{
-             "mainPh":"../../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeaters/3.png",
-             "translationKey":"spiralHeaters",
-             "subcategories":{
-                "spiralHeaters":{
-                   "mainPh":"../../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeaters/3.png",
-                   "descr":"spiralHeaters.descr",
-                   "diameter":"7 – 120mm",
-                   "length":"6 - 400mm",
-                   "maxElPower":"6 W/cm",
-                   "maxVolt":"12, 24, 48, 110, 220/230, 400V",
-                   "maxTempr":"500 °C",
-                   "ph":[
-                      "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/1.png",
-                      "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/2.png",
-                      "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/3.png",
-                      "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/4.png",
-                      "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/5.png"
-                   ]
-                }
-             }
-          }
-       }
-    },
+            "mainPh":"https://i.imgur.com/NILBVrV.jpeg",
+            "translationKey":"cartridgeHeatingElements",
+            "subcategories":{
+               "cartridgeHeatingElements":{
+                  "mainPh":"https://i.imgur.com/NILBVrV.jpeg",
+                  "subcategories":{
+                    "cartridgeHeatingElements":{
+                       "mainPh":"https://i.imgur.com/NILBVrV.jpeg",
+                       "descr":"cartridgeHeatingElements.descr",
+                       "diameter":"3 - 50mm",
+                       "length":"40 - 1300mm",
+                       "maxElPower":"50 W/cm",
+                       "maxVolt":"V: 12, 24, 48, 110, 220/230, 400V",
+                       "maxTempr":"500 °C",
+                       "ph":[
+                          "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/1.png",
+                          "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/2.png",
+                          "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/3.png",
+                          "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/4.png",
+                          "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/5.png"
+                       ] 
+                    }
+                  }
+               }
+            }
+         },
+         "spiralHeaters":{
+            "mainPh":"https://i.imgur.com/vIE2ViE.png",
+            "translationKey":"spiralHeaters",
+            "subcategories":{
+              "spiralHeaters":{
+                 "mainPh":"https://i.imgur.com/vIE2ViE.png",
+                  "subcategories":{
+                 "spiralHeaters":{
+                    "mainPh":"https://i.imgur.com/vIE2ViE.png",
+                    "descr":"spiralHeaters.descr",
+                    "diameter":"7 – 120mm",
+                    "length":"6 - 400mm",
+                    "maxElPower":"6 W/cm",
+                    "maxVolt":"12, 24, 48, 110, 220/230, 400V",
+                    "maxTempr":"500 °C",
+                    "ph":[
+                       "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/1.png",
+                       "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/2.png",
+                       "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/3.png",
+                       "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/4.png",
+                       "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/5.png"
+                    ]
+                 }
+              }}
+           }
+         }}},
     "extruderRingHeaters":{
        "name":"extruderRingHeaters",
-       "mainPh":"../../src/assets/img/IndustrialHeatingElements/Ring/rr.jpg",
+       "mainPh": "https://i.imgur.com/yk0CWe2.jpeg" ,
        "translationKey":"extruderRingHeaters",
        "categories":{
           "extruderRingHeaters":{
              "name":"extruderRingHeaters",
-             "mainPh":"../../src/assets/img/IndustrialHeatingElements/Ring/rr.jpg",
+             "mainPh":"https://i.imgur.com/yk0CWe2.jpeg",
              "subcategories":{
-                "bronze":{
-                   "descr":"extruderRingHeaters.bronze.descr",
-                   "diameter":"25 - 100mm",
-                   "width":"20 – 90mm",
-                   "thickness":"2.5 - 3mm",
-                   "maxElPower":"5 W/cm",
-                   "maxVolt":"12, 24, 48, 110, 220/230, 400 (others on order)",
-                   "maxTempr":"500 °C",
-                   "mainPh":"../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
-                   "ph":[
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/2.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/3.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/4.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/5.png"
-                   ]
-                },
+               "metal":{
+                  "descr":"extruderRingHeaters.metal.descr",
+                  "diameter":"25 - 300mm",
+                  "width":"20 – 90mm",
+                  "thickness":"3 - 4mm",
+                  "maxElPower":"4 W/cm",
+                  "maxVolt":"12, 24, 48, 110, 220/230, 400 (others on order)",
+                  "maxTempr":"350 °C",
+                  "extraDescr":"extruderRingHeaters.metal.extraDescr",
+                  "ph":[
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/1.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/2.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/3.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/4.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/5.png"
+                  ],
+                  "mainPh":"https://i.imgur.com/Ahua53g.png"
+               },
                 "ceramic":{
                    "descr":"extruderRingHeaters.ceramic.descr",
                    "diameter":"60 - 1000mm",
@@ -202,43 +210,42 @@
                       "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/3.png",
                       "../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/4.png"
                    ],
-                   "mainPh":"../src/assets/img/IndustrialHeatingElements/Ring/RingCeramic/1.png"
+                   "mainPh":"https://i.imgur.com/wmQfEWY.png"
                 },
-                "metal":{
-                   "descr":"extruderRingHeaters.metal.descr",
-                   "diameter":"25 - 300mm",
-                   "width":"20 – 90mm",
-                   "thickness":"3 - 4mm",
-                   "maxElPower":"4 W/cm",
-                   "maxVolt":"12, 24, 48, 110, 220/230, 400 (others on order)",
-                   "maxTempr":"350 °C",
-                   "extraDescr":"extruderRingHeaters.metal.extraDescr",
-                   "ph":[
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/1.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/2.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/3.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/4.png",
-                      "../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/5.png"
-                   ],
-                   "mainPh":"../src/assets/img/IndustrialHeatingElements/Ring/RingMetal/1.png"
-                }
+                "bronze":{
+                  "descr":"extruderRingHeaters.bronze.descr",
+                  "diameter":"25 - 100mm",
+                  "width":"20 – 90mm",
+                  "thickness":"2.5 - 3mm",
+                  "maxElPower":"5 W/cm",
+                  "maxVolt":"12, 24, 48, 110, 220/230, 400 (others on order)",
+                  "maxTempr":"500 °C",
+                  "mainPh":"https://i.imgur.com/XOu6EJr.png",
+                  "ph":[
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/1.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/2.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/3.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/4.png",
+                     "../src/assets/img/IndustrialHeatingElements/Ring/RingBronze/5.png"
+                  ]
+               }
              }
           }
        }
     },
     "Infrared Heaters":{
-       "mainPh":"../../src/assets/img/InfraredРeaters/ifr.jpg",
+       "mainPh":"https://i.imgur.com/jaPHsZv.jpeg",
        "categories":{
           "ceramic":{
-             "mainPh":"../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+             "mainPh":"https://i.imgur.com/eWlnarP.png",
              "descr":"InfraredHeatingElements.ceramic.descr",
              "translationKey":"InfraredHeatingElements",
              "subcategories":{
                 "spherical":{
-                   "mainPh":"../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+                   "mainPh":"https://i.imgur.com/eWlnarP.png",
                    "subcategories":{
                       "first":{
-                         "mainPh":"../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+                         "mainPh":"https://i.imgur.com/iO9C59z.jpeg",
                          "dimensions":"290mm*90mm",
                          "power":"150-1500W",
                          "maxVolt":"12-400V",
@@ -247,7 +254,7 @@
                          "descr":"InfraredHeatingElements.spherical.first.descr"
                       },
                       "second":{
-                         "mainPh":"../../src/assets/img/InfraredРeaters/InfraredCeramic/2.png",
+                         "mainPh":"https://i.imgur.com/PqAcxhm.jpeg",
                          "dimensions":"245mm*60mm",
                          "power":"100-1000W",
                          "maxVolt":"12-400V",
@@ -255,7 +262,7 @@
                          "infraredWaveRange":"1.0 – 10.0 microns"
                       },
                       "third":{
-                         "mainPh":"../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+                         "mainPh":"https://i.imgur.com/JqarftV.jpeg",
                          "dimensions":"122mm*60mm",
                          "power":"100-500W",
                          "maxVolt":"12-400V",
@@ -263,7 +270,7 @@
                          "infraredWaveRange":"1.0 – 10.0 microns"
                       },
                       "fourth":{
-                         "mainPh":"../../src/assets/img/InfraredРeaters/InfraredCeramic/1.png",
+                         "mainPh":"https://i.imgur.com/8yIFyXK.jpeg",
                          "dimensions":"60mm*60mm",
                          "power":"100-250W",
                          "maxVolt":"12-400V",
@@ -273,9 +280,10 @@
                    }
                 },
                 "flat":{
-                   "mainPh":"../../src/assets/img/InfraredРeaters/InfraredCeramic/8.png",
+                   "mainPh":"https://i.imgur.com/NewAhPv.jpeg",
                    "subcategories":{
                       "first":{
+                         "mainPh":"https://i.imgur.com/qiuPZVC.jpeg",
                          "dimensions":"290mm*90mm",
                          "power":"150-1500W",
                          "maxVolt":"12-400V",
@@ -283,6 +291,7 @@
                          "infraredWaveRange":"1.0 – 10.0 microns"
                       },
                       "second":{
+                        "mainPh":"https://i.imgur.com/yyXzVkH.jpeg",
                          "dimensions":"245mm*60mm",
                          "power":"100-1000W",
                          "maxVolt":"12-400V",
@@ -290,6 +299,7 @@
                          "infraredWaveRange":"1.0 – 10.0 microns"
                       },
                       "third":{
+                        "mainPh":"https://i.imgur.com/VnrvkeD.jpeg",
                          "dimensions":"122mm*60mm",
                          "power":"100-500W",
                          "maxVolt":"12-400V",
@@ -297,6 +307,7 @@
                          "infraredWaveRange":"1.0 – 10.0 microns"
                       },
                       "fourth":{
+                        "mainPh":"https://i.imgur.com/NewAhPv.jpeg",
                          "dimensions":"60mm*60mm",
                          "power":"100-250W",
                          "maxVolt":"12-400V",
@@ -306,7 +317,7 @@
                    }
                 },
                 "lamps":{
-                   "mainPh":"../../src/assets/img/InfraredРeaters/InfraredCeramic/4.png",
+                   "mainPh":"https://i.imgur.com/hZPP7hV.png",
                    "subcategories":{
                       "first":{
                          "dimensions":"Ø 90 mm",
@@ -328,11 +339,11 @@
           },
           "quartz":{
              "descr":"InfraredHeatingElements.quartz.descr",
-             "mainPh":"../../src/assets/img/InfraredРeaters/InfraredQuartz/1.png",
+             "mainPh":"https://i.imgur.com/YVjGPhn.jpeg",
              "additionalInfo":"InfraredHeatingElements.quartz.extraDescr",
              "subcategories":{
                 "first":{
-                   "mainPh":"../../src/assets/img/InfraredРeaters/InfraredQuartz/1.png",
+                   "mainPh":"https://i.imgur.com/OTTalJt.jpeg",
                    "dimensions":"247mm*62mm",
                    "power":"100-1000W",
                    "maxVolt":"230V",
@@ -340,7 +351,7 @@
                    "infraredWaveRange":"1.0 – 10.0 microns"
                 },
                 "second":{
-                   "mainPh":"../../src/assets/img/InfraredРeaters/InfraredQuartz/2.png",
+                   "mainPh":"https://i.imgur.com/YVjGPhn.jpeg",
                    "dimensions":"123mm*123mm",
                    "power":"100-1000W",
                    "maxVolt":"230V",
@@ -352,54 +363,63 @@
        }
     },
     "cartridgeHeatingElements":{
-       "mainPh":"../../src/assets/img/IndustrialHeatingElements/Сartridge/CartridgeHeaters/1.png",
+       "mainPh":"https://i.imgur.com/NILBVrV.jpeg",
        "translationKey":"cartridgeHeatingElements",
-       "subcategories":{
+       "categories":{
           "cartridgeHeatingElements":{
-             "mainPh":"../../src/assets/img/IndustrialHeatingElements/Сartridge/CartridgeHeaters/1.png",
-             "descr":"cartridgeHeatingElements.descr",
-             "diameter":"3 - 50mm",
-             "length":"40 - 1300mm",
-             "maxElPower":"50 W/cm",
-             "maxVolt":"V: 12, 24, 48, 110, 220/230, 400V",
-             "maxTempr":"500 °C",
-             "ph":[
-                "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/1.png",
-                "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/2.png",
-                "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/3.png",
-                "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/4.png",
-                "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/5.png"
-             ]
+             "mainPh":"https://i.imgur.com/NILBVrV.jpeg",
+             "subcategories":{
+               "cartridgeHeatingElements":{
+                  "mainPh":"https://i.imgur.com/NILBVrV.jpeg",
+                  "descr":"cartridgeHeatingElements.descr",
+                  "diameter":"3 - 50mm",
+                  "length":"40 - 1300mm",
+                  "maxElPower":"50 W/cm",
+                  "maxVolt":"V: 12, 24, 48, 110, 220/230, 400V",
+                  "maxTempr":"500 °C",
+                  "ph":[
+                     "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/1.png",
+                     "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/2.png",
+                     "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/3.png",
+                     "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/4.png",
+                     "../src/assets/img/IndustrialHeatingElements/Cartridge/CartridgeHeating/5.png"
+                  ] 
+               }
+             }
           }
        }
     },
     "spiralHeaters":{
-       "mainPh":"../../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeaters/3.png",
+       "mainPh":"https://i.imgur.com/vIE2ViE.png",
        "translationKey":"spiralHeaters",
-       "subcategories":{
-          "spiralHeaters":{
-             "mainPh":"../../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeaters/3.png",
-             "descr":"spiralHeaters.descr",
-             "diameter":"7 – 120mm",
-             "length":"6 - 400mm",
-             "maxElPower":"6 W/cm",
-             "maxVolt":"12, 24, 48, 110, 220/230, 400V",
-             "maxTempr":"500 °C",
-             "ph":[
-                "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/1.png",
-                "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/2.png",
-                "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/3.png",
-                "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/4.png",
-                "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/5.png"
-             ]
-          }
-       }
+       "categories":{
+         "spiralHeaters":{
+            "mainPh":"https://i.imgur.com/vIE2ViE.png",
+             "subcategories":{
+            "spiralHeaters":{
+               "mainPh":"https://i.imgur.com/vIE2ViE.png",
+               "descr":"spiralHeaters.descr",
+               "diameter":"7 – 120mm",
+               "length":"6 - 400mm",
+               "maxElPower":"6 W/cm",
+               "maxVolt":"12, 24, 48, 110, 220/230, 400V",
+               "maxTempr":"500 °C",
+               "ph":[
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/1.png",
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/2.png",
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/3.png",
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/4.png",
+                  "../src/assets/img/IndustrialHeatingElements/Spiral/SpiralHeater/5.png"
+               ]
+            }
+         }}
+      }
     },
     "ceramicHeatingElements":{
-       "mainPh":"../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/1.png",
+       "mainPh":"https://i.imgur.com/FID248c.png",
        "categories":{
           "ceramicHeatingElements":{
-             "mainPh":"../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/1.png",
+             "mainPh":"https://i.imgur.com/FID248c.png",
              "subcategories":{
                 "annealingFurnaces":{
                    "descr":"ceramicHeatingElements.annealingFurnaces.descr",
@@ -413,7 +433,7 @@
                       "../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/2.png",
                       "../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/3.png"
                    ],
-                   "mainPh":"../src/assets/img/СeramicHeatingFoams/Annealing Furnaces/1.png"
+                   "mainPh":"https://i.imgur.com/FID248c.png"
                 },
                 "dryHeaters":{
                    "descr":"ceramicHeatingElements.dryHeaters.descr",
@@ -434,7 +454,7 @@
                       "../src/assets/img/СeramicHeatingFoams/Dry Heaters/7.png",
                       "../src/assets/img/СeramicHeatingFoams/Dry Heaters/8.png"
                    ],
-                   "mainPh":"../../src/assets/img/СeramicHeatingFoams/DryHeaters/4.png"
+                   "mainPh":"https://i.imgur.com/vaXKlFt.jpeg"
                 }
              },
              "translationKey":"ceramicHeatingElements"
@@ -442,11 +462,11 @@
        }
     },
     "flexibleHeaters":{
-       "mainPh":"../src/assets/img/FlexibleHeaters/9.png",
+       "mainPh":"https://i.imgur.com/2eSx8jp.jpeg",
        "categories":{
           "flexibleHeaters":{
              "descr":"flexibleHeaters.descr",
-             "mainPh":"../src/assets/img/FlexibleHeaters/7.png",
+             "mainPh":"https://i.imgur.com/2eSx8jp.jpeg",
              "translationKey":"flexibleHeaters",
              "subcategories":{
                 "flexibleHeaters":{
@@ -464,18 +484,18 @@
                       "../src/assets/img/FlexibleHeaters/15.png",
                       "../src/assets/img/FlexibleHeaters/16.png"
                    ],
-                   "mainPh":"../src/assets/img/FlexibleHeaters/7.png"
+                   "mainPh":"https://i.imgur.com/2eSx8jp.jpeg"
                 }
              }
           }
        }
     },
     "components":{
-       "mainPh":"../src/assets/img/Accesories/pads/1.png",
+       "mainPh":"https://i.imgur.com/w77Lvn6.png",
        "categories":{
           "networkConnectors":{
              "descr":"components.networkConnectors.descr",
-             "mainPh":"../../src/assets/img/Accesories/NetworkСonnectors/1.png",
+             "mainPh":"https://i.imgur.com/5jgRwAa.png",
              "ph":[
                 "../src/assets/img/Accesories/pads/1.png",
                 "../src/assets/img/Accesories/pads/2.png",
@@ -491,14 +511,11 @@
                 "../src/assets/img/Accesories/pads/12.png",
                 "../src/assets/img/Accesories/pads/13.png",
                 "../src/assets/img/Accesories/pads/14.png"
-             ],
-             "subcategories":{
-                
-             }
+             ]
           },
           "Pads":{
              "descr":"components.Pads.descr",
-             "mainPh":"../src/assets/img/Accesories/pads/1.png",
+             "mainPh":"https://i.imgur.com/fEbI2mk.png",
              "ph":[
                 "../src/assets/img/Accesories/pads/1.png",
                 "../src/assets/img/Accesories/pads/2.png",
@@ -529,7 +546,7 @@
                       "../assets/img/Accesories/pads/5.png",
                       "../assets/img/Accesories/pads/5(1).png"
                    ],
-                   "mainPh":"../../src/assets/img/Accesories/pads/5.png"
+                   "mainPh":"https://i.imgur.com/uY04Eya.png"
                 },
                 "openThreePole":{
                    "material":"ceramic",
@@ -544,7 +561,7 @@
                       "../assets/img/Accesories/pads/4.png",
                       "../assets/img/Accesories/pads/4(1).png"
                    ],
-                   "mainPh":"../../src/assets/img/Accesories/pads/4.png"
+                   "mainPh":"https://i.imgur.com/iQOijb1.png"
                 },
                 "openFourPole":{
                    "material":"ceramic",
@@ -559,7 +576,7 @@
                       "../assets/img/Accesories/pads/3.png",
                       "../assets/img/Accesories/pads/3(1).png"
                    ],
-                   "mainPh":"../../src/assets/img/Accesories/pads/3.png"
+                   "mainPh":"https://i.imgur.com/C6UDml5.png"
                 },
                 "closedTwoPole":{
                    "material":"ceramic",
@@ -574,16 +591,16 @@
                       "../assets/img/Accesories/pads/2.png",
                       "../assets/img/Accesories/pads/2(1).png"
                    ],
-                   "mainPh":"../../src/assets/img/Accesories/pads/2.png"
+                   "mainPh":"https://i.imgur.com/Q6Sj629.png"
                 }
              }
           },
           "thermocouples":{
              "descr":"components.thermocouples.descr",
-             "mainPh":"../../src/assets/img/Accesories/thermocouples/1.png",
+             "mainPh":"https://i.imgur.com/Y44hM3J.jpeg",
              "subcategories":{
                 "typeK":{
-                   "mainPh":"../../src/assets/img/Accesories/thermocouples/1.png",
+                   "mainPh":"https://i.imgur.com/w77Lvn6.png",
                    "descr":"components.thermocouples.typeK.descr",
                    "ph":[
                       "../../src/assets/img/Accesories/thermocouples/1.png",
@@ -591,7 +608,7 @@
                    ]
                 },
                 "typeJ":{
-                   "mainPh":"../../src/assets/img/Accesories/thermocouples/3.png",
+                   "mainPh":"https://i.imgur.com/iA4BCb1.png",
                    "descr":"components.thermocouples.typeJ.descr",
                    "ph":[
                       "../../src/assets/img/Accesories/thermocouples/3.png",

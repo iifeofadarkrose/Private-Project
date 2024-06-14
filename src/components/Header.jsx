@@ -4,17 +4,23 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { IoMenu } from "react-icons/io5";
 import logo from "../assets/Logo.png";
+import PropTypes from "prop-types";
 
-const Header = () => {
+const Header = ({ selectedCategory }) => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(
-    localStorage.getItem("selectedLanguage") || "fr"
-  );
+  const [selectedLanguage, setSelectedLanguage] = useState("fr");
 
   useEffect(() => {
-    i18n.changeLanguage(selectedLanguage.toLowerCase());
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "fr";
+    setSelectedLanguage(savedLanguage);
+    i18n.changeLanguage(savedLanguage);
+  }, [i18n]);
+
+  useEffect(() => {
+    i18n.changeLanguage(selectedLanguage);
+    localStorage.setItem("selectedLanguage", selectedLanguage);
   }, [selectedLanguage, i18n]);
 
   const toggleMenu = () => {
@@ -28,8 +34,14 @@ const Header = () => {
   const selectLanguage = (language) => {
     setSelectedLanguage(language);
     setIsOpen(false);
-    localStorage.setItem("selectedLanguage", language);
   };
+
+  const handleLogoClick = () => {
+    scroll.scrollToTop();
+    selectedCategory(null);
+  };
+
+  
 
   return (
     <div className="mx-auto lg:max-w-screen-lg px-4 lg:px-0">
@@ -38,30 +50,41 @@ const Header = () => {
           to="/"
           smooth={true}
           duration={500}
-          className="text-[20px] md:text-2xl lg:text-xl lg:mr-8"
-          onClick={() => scroll.scrollToTop()}
+          className="text-[20px] md:text-2xl lg:text-xl lg:mr-8 hover:color-[#279CD5]"
+          onClick={handleLogoClick}
         >
-          <img className="w-[164px] h-[95px]" src={logo} alt="" />
+          <img className="w-[164px] h-[95px]" src={logo} alt="Logo" />
         </Link>
 
         <div className="hidden md:flex gap-8 md:text-[16px] lg:text-xl uppercase">
-          <Link to="/" className="block">
+          <Link
+            to="/"
+            onClick={handleLogoClick}
+            className="block hover:text-[#279CD5]"
+          >
             {t("home")}
           </Link>
-          <Link to="/projects">{t("our_work")}</Link>
+          <ScrollLink
+            to="work"
+            smooth={true}
+            duration={1000}
+            className="hover:text-[#279CD5] cursor-pointer"
+          >
+            {t("our_work")}
+          </ScrollLink>
           <ScrollLink
             to="about"
             smooth={true}
-            duration={500}
-            className="block cursor-pointer"
+            duration={800}
+            className="block cursor-pointer hover:text-[#279CD5]"
           >
             {t("about_us")}
           </ScrollLink>
           <ScrollLink
             to="contact"
             smooth={true}
-            duration={500}
-            className="block cursor-pointer"
+            duration={1000}
+            className="block cursor-pointer hover:text-[#279CD5]"
           >
             {t("contact_us")}
           </ScrollLink>
@@ -71,9 +94,9 @@ const Header = () => {
           <div className="relative">
             <button
               onClick={toggleDropdown}
-              className="px-2 py-2 text-[#279CD5] border-2 border-[#279CD5] rounded-2xl focus:outline-none focus:bg-gray-300 flex items-center"
+              className="px-2 py-2 hover:bg-[#279CD5] hover:text-white text-[#279CD5] border-2 border-[#279CD5] rounded-2xl focus:outline-none focus:bg-gray-300 flex items-center"
             >
-              {selectedLanguage}
+              {selectedLanguage.toUpperCase()}
               <svg
                 className="w-4 h-4 ml-2 mt-1 md:mt-0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,23 +133,7 @@ const Header = () => {
           <IoMenu
             onClick={toggleMenu}
             className="h-8 w-8 cursor-pointer md:hidden"
-          >
-            {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            )}
-          </IoMenu>
+          />
 
           {isMenuOpen && (
             <div className="absolute bg-white py-2 px-4 border border-solid border-gray-300 shadow-md rounded-lg z-50 mt-44 right-8">
@@ -167,6 +174,10 @@ const Header = () => {
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  selectedCategory: PropTypes.func,
 };
 
 export default Header;

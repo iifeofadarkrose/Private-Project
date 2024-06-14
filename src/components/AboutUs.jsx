@@ -17,23 +17,27 @@ const AboutUs = () => {
   }, [i18n]);
 
   return (
-    <div className="mx-auto lg:w-[1000px] px-4 py-8">
-      <section className="bg-white p-6 rounded-lg shadow-lg flex flex-col sm:flex-row items-center">
-        <div className="sm:w-2/3 sm:pr-8 w-[1/2]">
-          <h2 className="text-2xl font-bold mb-4">{t("who_are_we")}</h2>
-          <h3 className="text-xl font-semibold mb-4">{t("what_do_we_do")}</h3>
-          <p className="mb-4">
-            {t("our_story")}
-          </p>
-          <p className="mb-4">
-            {t("our_philosophy")}
-          </p>
+    <section id="about" className="mx-auto bg-[#EDEFF4] py-16 lg:py-24 max-w-[1000px]">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="px-6">
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-[#279CD5]">{t("who_are_we")}</h2>
+            <h3 className="text-xl lg:text-3xl font-semibold mb-6 text-[#486284]">{t("what_do_we_do")}</h3>
+            <div className="max-w-[90%]">
+              <p className="mb-4 lg:text-[18px]">{t("our_story")}</p>
+              <p className="mb-4 lg:text-[18px]">{t("our_philosophy")}</p>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src="https://i.imgur.com/YI3aNSC.png"
+              alt="Image Description"
+              className="w-full lg:max-w-md rounded-lg shadow-lg"
+            />
+          </div>
         </div>
-        <div className="sm:w-1/3">
-          <img src="../../src/assets/place.png" alt="Image Description" className=" rounded-lg shadow-lg" />
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
