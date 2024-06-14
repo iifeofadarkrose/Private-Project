@@ -1,4 +1,3 @@
-// i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -14,12 +13,14 @@ const resources = {
   },
 };
 
+const savedLanguage = localStorage.getItem("selectedLanguage") || "fr"; // Получаем сохраненный язык из localStorage, если его нет, то используем "fr"
+
 i18n
   .use(initReactI18next) // Подключаем реакт-специфичные функции i18next
   .init({
     resources,
-    lng: 'fr', // Устанавливаем язык по умолчанию
-    fallbackLng: 'fr', // Указываем язык, который будет использован, если перевод не найден
+    lng: savedLanguage, // Используем сохраненный язык из localStorage
+    fallbackLng: "fr", // Указываем язык, который будет использован, если перевод не найден
     interpolation: {
       escapeValue: false, // Не экранировать строки, потому что React это делает сам
     },

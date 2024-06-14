@@ -10,18 +10,21 @@ const Header = ({ selectedCategory }) => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("fr");
-
-  useEffect(() => {
+  const [selectedLanguage, setSelectedLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("selectedLanguage") || "fr";
-    setSelectedLanguage(savedLanguage);
-    i18n.changeLanguage(savedLanguage);
-  }, [i18n]);
+    return savedLanguage;
+  });
 
+  // При загрузке компонента устанавливаем язык из localStorage в i18n
   useEffect(() => {
     i18n.changeLanguage(selectedLanguage);
-    localStorage.setItem("selectedLanguage", selectedLanguage);
   }, [selectedLanguage, i18n]);
+
+  // Обработчик для переключения языка
+  const selectLanguage = (language) => {
+    setSelectedLanguage(language);
+    localStorage.setItem("selectedLanguage", language); // Сохраняем выбранный язык в localStorage
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,17 +34,10 @@ const Header = ({ selectedCategory }) => {
     setIsOpen(!isOpen);
   };
 
-  const selectLanguage = (language) => {
-    setSelectedLanguage(language);
-    setIsOpen(false);
-  };
-
   const handleLogoClick = () => {
     scroll.scrollToTop();
     selectedCategory(null);
   };
-
-  
 
   return (
     <div className="mx-auto lg:max-w-screen-lg px-4 lg:px-0">
